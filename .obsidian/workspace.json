@@ -6,7 +6,7 @@
       {
         "id": "c71e696c1a2f8193",
         "type": "tabs",
-        "dimension": 41.27443881245475,
+        "dimension": 56.600566572237966,
         "children": [
           {
             "id": "db99fdd770325c81",
@@ -42,10 +42,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Lecture Slides/2025-07-17-Session-7-PML_2025_OnlineMachineLearning.pdf"
+                "file": "Lecture Slides/2025-05-15-Session-2-Intro-to-ML.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "2025-07-17-Session-7-PML_2025_OnlineMachineLearning"
+              "title": "2025-05-15-Session-2-Intro-to-ML"
             }
           }
         ],
@@ -54,57 +54,23 @@
       {
         "id": "f8fe9cce9bfee865",
         "type": "tabs",
-        "dimension": 28.566256335988417,
+        "dimension": 43.39943342776204,
         "children": [
           {
-            "id": "d0295e6dbe5016db",
+            "id": "f63b81a2563f98c8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2025-07-17 Lecture 7.md",
+                "file": "Lectures/2025-05-15 - Lecture 02.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-07-17 Lecture 7"
+              "title": "2025-05-15 - Lecture 02"
             }
           }
         ]
-      },
-      {
-        "id": "669b41d14ceec255",
-        "type": "tabs",
-        "dimension": 30.159304851556847,
-        "children": [
-          {
-            "id": "e038cc4af812b862",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Lecture Slides/2025-07-17-Session-7-PML_2025_OnlineMachineLearning.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "2025-07-17-Session-7-PML_2025_OnlineMachineLearning"
-            }
-          },
-          {
-            "id": "593f7e8c93d5c038",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Untitled"
-            }
-          }
-        ],
-        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -161,8 +127,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 337.5041847229004,
-    "collapsed": true
+    "width": 337.5041847229004
   },
   "right": {
     "id": "191808e863dbc7c1",
@@ -263,12 +228,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d0295e6dbe5016db",
+  "active": "f63b81a2563f98c8",
   "lastOpenFiles": [
-    "Untitled.md",
-    "2025-07-17 Lecture 7.md",
-    "Pasted image 20250717195456.png",
+    "ToDO.md",
+    "Lectures/2025-05-15 - Lecture 02.md",
+    "Lecture Slides/2025-05-15-Session-2-Intro-to-ML.pdf",
     "Lecture Slides/2025-07-17-Session-7-PML_2025_OnlineMachineLearning.pdf",
+    "Lectures/2025-05-08 - Lecture 01.md",
+    "Lectures/2025-07-17 Lecture 7.md",
+    "Untitled.md",
+    "Pasted image 20250717195456.png",
     "Pasted image 20250717162317.png",
     "Pasted image 20250717162130.png",
     "Pasted image 20250717161427.png",
@@ -279,8 +248,6 @@
     "Lecture Slides/2025-06-12-Session-4-NN.pdf",
     "Lectures/Lecture 2025-07-10.md",
     "Lecture Slides/Nicht bestätigt 10327.crdownload",
-    "Lectures/2025-05-08 - Lecture 01.md",
-    "Lectures/2025-05-15 - Lecture 02.md",
     "Lectures/2025-05-22 Lecture 03.md",
     "Lectures/2025-06-05 Lecture 04.md",
     "Lectures/Lecture 2025-06-12.md",
@@ -292,8 +259,6 @@
     "Exercise_Material/data_XS15.pkl",
     "Exercise_Material/data_LS12.pkl",
     "Exercise_Material/Nicht bestätigt 772641.crdownload",
-    "Exercise_Material/Nicht bestätigt 331308.crdownload",
-    "ToDO.md",
     "Reading/Recordings.md"
   ]
 }
