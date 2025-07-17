@@ -6,7 +6,7 @@
       {
         "id": "c71e696c1a2f8193",
         "type": "tabs",
-        "dimension": 56.600566572237966,
+        "dimension": 37.019230769230774,
         "children": [
           {
             "id": "db99fdd770325c81",
@@ -47,35 +47,48 @@
               "icon": "lucide-file-text",
               "title": "2025-05-21-Session-3-Intro-to-NN"
             }
-          },
+          }
+        ],
+        "currentTab": 2
+      },
+      {
+        "id": "697b9b0e1f1f9fa3",
+        "type": "tabs",
+        "dimension": 32.39644970414201,
+        "children": [
           {
             "id": "c2410b765ea3b3c2",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Lecture Slides/2025-05-08-Session-1.pdf"
+                "file": "Lectures/2025-06-05 - Lecture 04.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "2025-05-08-Session-1"
+              "icon": "lucide-file",
+              "title": "2025-06-05 - Lecture 04"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       },
       {
-        "id": "f8fe9cce9bfee865",
+        "id": "ad9f27b276cb691a",
         "type": "tabs",
-        "dimension": 43.39943342776204,
+        "dimension": 30.58431952662722,
         "children": [
           {
             "id": "d71341fd8f563a1d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Lectures/2025-05-22 - Lecture 03.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "2025-05-22 - Lecture 03"
             }
           }
         ]
@@ -135,7 +148,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 337.5041847229004
+    "width": 325.5
   },
   "right": {
     "id": "191808e863dbc7c1",
@@ -238,36 +251,37 @@
   },
   "active": "d71341fd8f563a1d",
   "lastOpenFiles": [
+    "Lectures/2025-06-05 - Lecture 04.md",
     "Lectures/2025-05-22 - Lecture 03.md",
-    "README.md",
-    "Lecture Slides/2025-05-08-Session-1.pdf",
+    "Pasted image 20250718000827.png",
     "Lecture Slides/2025-05-21-Session-3-Intro-to-NN.pdf",
+    "Pasted image 20250718000805.png",
+    "Pasted image 20250718000716.png",
+    "Lecture Slides/2025-06-12-Session-4-NN.pdf",
+    "Pasted image 20250718000629.png",
+    "Pasted image 20250717234802.png",
+    "Pasted image 20250717234735.png",
+    "Pasted image 20250717233450.png",
+    "Pasted image 20250717232831.png",
+    "Lectures/2025-06-12 - Lecture 05.md",
+    "Lectures/2025-05-15 - Lecture 02.md",
+    "Lecture Slides/2025-05-15-Session-2-Intro-to-ML.pdf",
+    "Lecture Slides/2025-05-08-Session-1.pdf",
+    "Lectures/2025-05-08 - Lecture 01.md",
+    "Pasted image 20250717221820.png",
+    "Exercises/Possible Exercice Questions.md",
+    "Exercises",
+    "README.md",
     "Lectures/2025-07-17 - Lecture 07.md",
     "Lectures/2025-07-10 - Lecture 06.md",
-    "Lectures/2025-05-08 - Lecture 01.md",
-    "Lectures/2025-06-12 - Lecture 05.md",
-    "Lectures/2025-06-05 - Lecture 04.md",
-    "Lectures/2025-05-15 - Lecture 02.md",
-    "Lecture Slides/2025-06-12-Session-4-NN.pdf",
     "Images/Pasted image 20250717211601.png",
-    "Images/Pasted image 20250717212205.png",
-    "Images/Pasted image 20250717214845.png",
-    "Images/Pasted image 20250717214112.png",
-    "Images/Pasted image 20250717213225.png",
-    "Images/Pasted image 20250717212706.png",
-    "Images/Pasted image 20250717212507.png",
-    "Lecture Slides/2025-05-15-Session-2-Intro-to-ML.pdf",
     "Untitled.md",
     "ToDO.md",
     "Reading/Recordings.md",
-    "Images/Pasted image 20250515104741.png",
     "Lecture Slides/tmp-2025-05-15-Session-2-Intro-to-ML.pdf",
-    "Images/Pasted image 20250717211035.png",
-    "Images/Pasted image 20250717210823.png",
     "Lecture Slides/2025-07-17-Session-7-PML_2025_OnlineMachineLearning.pdf",
     "Lecture Slides/Nicht bestätigt 10327.crdownload",
     "Lecture Slides/2025-07-10-Session-6-LLM.pdf",
-    "Lecture Slides/2025-07-03-Session-5-LSTM-GAN-keynote-sides.pdf",
-    "Lecture Slides/Nicht bestätigt 511993.crdownload"
+    "Lecture Slides/2025-07-03-Session-5-LSTM-GAN-keynote-sides.pdf"
   ]
 }
