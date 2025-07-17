@@ -47,9 +47,21 @@
               "icon": "lucide-file-text",
               "title": "2025-05-21-Session-3-Intro-to-NN"
             }
+          },
+          {
+            "id": "c2410b765ea3b3c2",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Lecture Slides/2025-05-08-Session-1.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "2025-05-08-Session-1"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       },
       {
         "id": "f8fe9cce9bfee865",
@@ -57,17 +69,13 @@
         "dimension": 43.39943342776204,
         "children": [
           {
-            "id": "f63b81a2563f98c8",
+            "id": "d71341fd8f563a1d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Lectures/2025-05-22 - Lecture 03.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "2025-05-22 - Lecture 03"
+              "title": "New tab"
             }
           }
         ]
@@ -228,20 +236,22 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f63b81a2563f98c8",
+  "active": "d71341fd8f563a1d",
   "lastOpenFiles": [
+    "Lectures/2025-05-22 - Lecture 03.md",
+    "README.md",
+    "Lecture Slides/2025-05-08-Session-1.pdf",
+    "Lecture Slides/2025-05-21-Session-3-Intro-to-NN.pdf",
     "Lectures/2025-07-17 - Lecture 07.md",
     "Lectures/2025-07-10 - Lecture 06.md",
     "Lectures/2025-05-08 - Lecture 01.md",
     "Lectures/2025-06-12 - Lecture 05.md",
     "Lectures/2025-06-05 - Lecture 04.md",
-    "Lectures/2025-05-22 - Lecture 03.md",
     "Lectures/2025-05-15 - Lecture 02.md",
     "Lecture Slides/2025-06-12-Session-4-NN.pdf",
     "Images/Pasted image 20250717211601.png",
     "Images/Pasted image 20250717212205.png",
     "Images/Pasted image 20250717214845.png",
-    "Lecture Slides/2025-05-21-Session-3-Intro-to-NN.pdf",
     "Images/Pasted image 20250717214112.png",
     "Images/Pasted image 20250717213225.png",
     "Images/Pasted image 20250717212706.png",
@@ -249,7 +259,6 @@
     "Lecture Slides/2025-05-15-Session-2-Intro-to-ML.pdf",
     "Untitled.md",
     "ToDO.md",
-    "README.md",
     "Reading/Recordings.md",
     "Images/Pasted image 20250515104741.png",
     "Lecture Slides/tmp-2025-05-15-Session-2-Intro-to-ML.pdf",
@@ -259,7 +268,6 @@
     "Lecture Slides/Nicht bestätigt 10327.crdownload",
     "Lecture Slides/2025-07-10-Session-6-LLM.pdf",
     "Lecture Slides/2025-07-03-Session-5-LSTM-GAN-keynote-sides.pdf",
-    "Lecture Slides/Nicht bestätigt 511993.crdownload",
-    "Exercise_Material/data_XS15.pkl"
+    "Lecture Slides/Nicht bestätigt 511993.crdownload"
   ]
 }
