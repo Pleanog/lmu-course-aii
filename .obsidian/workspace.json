@@ -42,10 +42,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Lecture Slides/2025-05-15-Session-2-Intro-to-ML.pdf"
+                "file": "Lecture Slides/2025-05-21-Session-3-Intro-to-NN.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "2025-05-15-Session-2-Intro-to-ML"
+              "title": "2025-05-21-Session-3-Intro-to-NN"
             }
           }
         ],
@@ -62,12 +62,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lectures/2025-05-15 - Lecture 02.md",
+                "file": "Lectures/2025-05-22 - Lecture 03.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-05-15 - Lecture 02"
+              "title": "2025-05-22 - Lecture 03"
             }
           }
         ]
@@ -228,37 +228,38 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "87a850bcf9ba090c",
+  "active": "f63b81a2563f98c8",
   "lastOpenFiles": [
-    "Lecture Slides/tmp-2025-05-15-Session-2-Intro-to-ML.pdf",
-    "Lectures/2025-05-15 - Lecture 02.md",
-    "Lectures/2025-05-22 Lecture 03.md",
-    "Pasted image 20250717211035.png",
-    "Pasted image 20250717210823.png",
-    "Lecture Slides/2025-05-15-Session-2-Intro-to-ML.pdf",
-    "Pasted image 20250717202219.png",
-    "Pasted image 20250717202003.png",
-    "Pasted image 20250717201855.png",
-    "ToDO.md",
-    "Lecture Slides/2025-07-17-Session-7-PML_2025_OnlineMachineLearning.pdf",
+    "Lectures/2025-07-17 - Lecture 07.md",
+    "Lectures/2025-07-10 - Lecture 06.md",
     "Lectures/2025-05-08 - Lecture 01.md",
-    "Lectures/2025-07-17 Lecture 7.md",
-    "Untitled.md",
-    "Pasted image 20250717195456.png",
-    "Pasted image 20250717162317.png",
-    "Pasted image 20250717162130.png",
-    "Pasted image 20250717161427.png",
-    "Pasted image 20250717110536.png",
+    "Lectures/2025-06-12 - Lecture 05.md",
+    "Lectures/2025-06-05 - Lecture 04.md",
+    "Lectures/2025-05-22 - Lecture 03.md",
+    "Lectures/2025-05-15 - Lecture 02.md",
     "Lecture Slides/2025-06-12-Session-4-NN.pdf",
-    "Lectures/Lecture 2025-07-10.md",
+    "Images/Pasted image 20250717211601.png",
+    "Images/Pasted image 20250717212205.png",
+    "Images/Pasted image 20250717214845.png",
+    "Lecture Slides/2025-05-21-Session-3-Intro-to-NN.pdf",
+    "Images/Pasted image 20250717214112.png",
+    "Images/Pasted image 20250717213225.png",
+    "Images/Pasted image 20250717212706.png",
+    "Images/Pasted image 20250717212507.png",
+    "Lecture Slides/2025-05-15-Session-2-Intro-to-ML.pdf",
+    "Untitled.md",
+    "ToDO.md",
+    "README.md",
+    "Reading/Recordings.md",
+    "Images/Pasted image 20250515104741.png",
+    "Lecture Slides/tmp-2025-05-15-Session-2-Intro-to-ML.pdf",
+    "Images/Pasted image 20250717211035.png",
+    "Images/Pasted image 20250717210823.png",
+    "Lecture Slides/2025-07-17-Session-7-PML_2025_OnlineMachineLearning.pdf",
     "Lecture Slides/Nicht bestätigt 10327.crdownload",
-    "Lectures/2025-06-05 Lecture 04.md",
-    "Lectures/Lecture 2025-06-12.md",
     "Lecture Slides/2025-07-10-Session-6-LLM.pdf",
     "Lecture Slides/2025-07-03-Session-5-LSTM-GAN-keynote-sides.pdf",
     "Lecture Slides/Nicht bestätigt 511993.crdownload",
-    "Exercise_Material/data_XS15.pkl",
-    "Exercise_Material/data_LS12.pkl",
-    "Reading/Recordings.md"
+    "Exercise_Material/data_XS15.pkl"
   ]
 }
