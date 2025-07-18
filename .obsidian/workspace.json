@@ -33,26 +33,14 @@
               "icon": "lucide-file-text",
               "title": "2025-06-12-Session-4-NN"
             }
-          },
-          {
-            "id": "44aaceaba1279c16",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Lecture Slides/2025-05-08-Session-1.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "2025-05-08-Session-1"
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       },
       {
         "id": "697b9b0e1f1f9fa3",
         "type": "tabs",
-        "dimension": 61.88118811881188,
+        "dimension": 30.94059405940594,
         "children": [
           {
             "id": "287b28a95e17fff4",
@@ -60,12 +48,33 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lectures/Session 01 - Artificial Intelligence in Interactive Systems.md",
+                "file": "Lectures/Session 05 - Long Short-Term Memory & GAN.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Session 01 - Artificial Intelligence in Interactive Systems"
+              "title": "Session 05 - Long Short-Term Memory & GAN"
+            }
+          }
+        ]
+      },
+      {
+        "id": "0610f351cea49376",
+        "type": "tabs",
+        "dimension": 30.94059405940594,
+        "children": [
+          {
+            "id": "44aaceaba1279c16",
+            "type": "leaf",
+            "state": {
+              "type": "split-diff-view",
+              "state": {
+                "aFile": "Lectures/Session 03 - Intro to Neural Networks.md",
+                "bFile": "Lectures/Session 03 - Intro to Neural Networks.md",
+                "aRef": ""
+              },
+              "icon": "diff",
+              "title": "Diff: Session 03 - Intro to Neural Networks"
             }
           }
         ]
@@ -125,7 +134,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 472.5
+    "width": 293.5
   },
   "right": {
     "id": "191808e863dbc7c1",
@@ -226,31 +235,31 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "87a850bcf9ba090c",
+  "active": "44aaceaba1279c16",
   "lastOpenFiles": [
-    "Images/Pasted image 20250718134532.png",
-    "Images/Pasted image 20250718132022.png",
-    "Lectures/Session 05 - Long Short-Term Memory & GAN.md",
-    "Lecture Slides/2025-07-03-Session-5-LSTM-GAN.pdf",
     "Lectures/Session 04 - Neural Networks.md",
+    "Lectures/Session 05 - Long Short-Term Memory & GAN.md",
     "Lectures/Session 03 - Intro to Neural Networks.md",
+    "Lecture Slides/2025-06-12-Session-4-NN.pdf",
+    "Untitled.md",
+    "Lectures/Session 06 - Large Langage Models (LLM).md",
+    "Images/Pasted image 20250718144245.png",
+    "Images/Pasted image 20250718212456.png",
+    "Images/Pasted image 20250718211503.png",
+    "Images/Pasted image 20250718205927.png",
+    "Images/Pasted image 20250718205304.png",
+    "Pasted image 20250718143810.png",
+    "Images/Pasted image 20250718144305.png",
+    "Lecture Slides/2025-07-03-Session-5-LSTM-GAN.pdf",
     "Lecture Slides/2025-05-08-Session-1.pdf",
     "Lectures/Session 02 - Intro to Machine Learning.md",
     "Lectures/Session 01 - Artificial Intelligence in Interactive Systems.md",
-    "Untitled.md",
+    "Images/Pasted image 20250718134532.png",
+    "Images/Pasted image 20250718132022.png",
     "Images/Pasted image 20250718133216.png",
-    "Lecture Slides/2025-06-12-Session-4-NN.pdf",
     "Lectures/Session 07 - Online Machine Learning.md",
-    "Lectures/Session 06 - Large Langage Models (LLM).md",
     "Lecture Slides/2025-07-03-Session-5-LSTM-GAN-keynote-sides.pdf",
     "Lecture Slides/2025-05-21-Session-3-Intro-to-NN.pdf",
-    "Images/Pasted image 20250717221820.png",
-    "Images/Pasted image 20250718000827.png",
-    "Images/Pasted image 20250718000805.png",
-    "Images/Pasted image 20250718000716.png",
-    "Images/Pasted image 20250718000629.png",
-    "Images/Pasted image 20250717234802.png",
-    "Images/Pasted image 20250717234735.png",
     "Lecture Slides/2025-05-15-Session-2-Intro-to-ML.pdf",
     "Exercises/Possible Exercice Questions.md",
     "Exercises",

@@ -295,7 +295,7 @@ One common data augmentation technique is adding noise to the data. This can hel
 - **Normal Random Noise**: Adding noise drawn from a normal (Gaussian) distribution.
     ![[Pasted image 20250718000805.png]]
 	   
-- **Perlin Noise**: A type of gradient noise often used to generate natural-looking textures and patterns.
+- **Perlin Noise**: A type of gradient noise often used to generate natural-looking textures and patterns. It adds a smooth curve as we do not want jittery noises everythigng in the world usually has more gradients than hard edges.
     ![[Pasted image 20250718000827.png]]
 
 ### General Data Augmentation Ideas
