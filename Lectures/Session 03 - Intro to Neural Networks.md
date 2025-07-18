@@ -312,3 +312,5 @@ When dealing with images that might have missing or "unknown" information due to
 - **Fill with "zero"**: Filling unknown regions with black pixels.
 - **Always zoom in**: Ensuring that transformations do not create empty borders by always zooming into the relevant content.
 - **Fill with other image information**: Using techniques like reflection or wrapping to fill new areas with existing image patterns.
+
+---
