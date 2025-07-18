@@ -93,12 +93,9 @@ tf.keras.layers.BatchNormalization()
 - **Improves Training**: It normalizes the inputs to each layer, effectively standardizing the mean and variance of the activations within a mini-batch.
 - **Often Speeds up Training**: By stabilizing the input distribution for each layer, it allows for higher learning rates and faster convergence during training.
 
-> [!tip]
-> 
-> ### Effect of Batch Normalization
-> 
+> [!tip] Effect of Batch Normalization
 > Batch Normalization addresses the problem of **Internal Covariate Shift**, where the distribution of activations in a network changes as the parameters of previous layers are updated.  
-> Imagine your training data points are spread out, forming two distinct clusters (like many dots spread across, some clustered close, forming two groups).  
+> If the training data points are spread out, forming two distinct clusters (*like in the image above*, forming two groups).  
 > Batch Normalization works by rescaling and re-centering these activation distributions, effectively moving all these points closer together within their respective clusters.  
 > This makes the optimization landscape smoother and easier for the model to learn.
 
@@ -190,8 +187,57 @@ Let’s break down each line:
 
 # Optimizer and Hyperparameter
 
-### #TODO
+"**Impact of hyperparameters on a model**" means we’re looking at how different **settings** (like the number of neurons, learning rate, dropout rate, etc.) affect how well a machine learning model learns and performs.
 
+- If the **temperature** is too high → it halucinates.
+- If the **hidden layers** are to broad and not reduced → it might loose focus.
+
+![[Pasted image 20250718215002.png]]
+
+> [!quote] The **MNIST dataset** (Modified National Institute of Standards and Technology database)
+ “A large database of **70,000 handwritten digits** (0 to 9), with 60,000 for training and 10,000 for testing. Each digit is represented as a **28×28 grayscale image**.”  
+> _(LeCun et al., 1998)_
+
+![[Pasted image 20250718215026.png]]
+#### Analyzing the MNIST Dataset with a simple sodel:
+
+- **Input (784)**:  
+    Each 28×28 pixel image is flattened into a long row of 784 numbers (28×28 = 784). These are the pixel brightness values.
+- **Dense(256)**:  
+    First fully connected layer with 256 neurons. Every input is connected to every neuron.  
+    This layer starts learning patterns — maybe strokes or loops from digits.
+- **Dense(128) with Dropout 0.5*:  
+    Another dense layer with 128 neurons, **but with dropout** — so only every second neuron is used.  This layer refines the learned features further, like distinguishing a ‘5’ from a ‘6’.
+- **Dense(10) with Dropout 0.5**:  
+    Final output layer. There are **10 neurons**, one for each digit (0–9).  
+    The model outputs **10 probabilities** — whichever is highest is the model’s guess!
+    Again with a dropout of 0,5 before the output!
+
+> [!question] What if we had a dropout of 0.5 after the last  output layer?
+> We'd be randomly "turning off" 50% of the **10 output neurons**, which means **some digits might never be predicted** during training! That would be bad!
+
+---
+
+## Optimizer
+
+> [!quote] The optimizer
+> The optimizer is an algorithm that decided on how to adjust the weights and biases during backpropagation. This is done by minimizing the cost described by the loss function.
+
+An **optimizer** is the algorithm that updates the **weights** of the neural network during training so that the model gets better at minimizing error (or “loss”).
+
+Popular optimizers:
+- `SGD` (Stochastic Gradient Descent) – basic, but slower
+- `Adam` – smarter and faster at learning, often used with MNIST
+
+It looks at the weights after each attempt of predicting a number. and changes the values slightly, to hopefully improve the prediction.
+
+### Optimizer Test
+
+![[Pasted image 20250612112605.png]]
+
+# See Session 5 notes!
+
+### #TODO
 
 ---
 ## Pre-Trained Models
