@@ -312,6 +312,7 @@ The objective in K-means clustering is to minimize the sum of squared distances 
 Dimensionality reduction is an unsupervised learning technique that involves transforming high-dimensional data into a lower-dimensional space. This process is crucial for simplifying data, reducing noise, and making it easier to visualize and analyze.
 
 ![[Pasted image 20250717210823.png]]
+https://www.geeksforgeeks.org/machine-learning/dimensionality-reduction/
 
 One of the prominent methods for dimensionality reduction is **Principal Component Analysis (PCA)**. PCA aims to reduce the number of features (dimensions) in a dataset while retaining as much variance as possible.
 
