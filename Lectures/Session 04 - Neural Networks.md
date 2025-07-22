@@ -148,40 +148,42 @@ By combining these powerful components...
 This `tf.keras.Sequential` model demonstrates a typical Convolutional Neural Network architecture, combining the layers discussed above for a classification task.
 
 ```python
+# Initialize a sequential model, a linear stack of layers
 model = Sequential()
+
+# Define the input shape: 28x28 pixels, 1 channel (grayscale)
 model.add(InputLayer((28,28,1), name="InputLayer"))
+
+# Add a 2D convolutional layer with 128 filters, 3x3 kernel, ReLU activation, padding to keep dimensions
 model.add(Conv2D(filters=128, kernel_size=(3,3), activation='relu', padding='same'))
+
+# Add max pooling to downsample the feature maps (default 2x2 pool size)
 model.add(MaxPool2D())
+
+# Add dropout layer to randomly disable 25% of neurons during training to reduce overfitting
 model.add(Dropout(rate=0.25))
+
+# Add another 2D convolutional layer with 64 filters, 3x3 kernel, ReLU activation, same padding
 model.add(Conv2D(64, kernel_size=(3,3), activation='relu', padding='same'))
+
+# Add max pooling again to further downsample feature maps
 model.add(MaxPool2D())
+
+# Add batch normalization to stabilize and speed up training by normalizing activations
 model.add(BatchNormalization())
+
+# New layer Flatten needed after Conv2D to use a Dense next, because Conv2D returns a multi-dimensional tensor. This flattens the multi-dimensional tensor output to a 1D vector for the next dense layers
 model.add(Flatten())
-model.add(Dense(128,
-name="HiddenLayer1", activation='relu'))
+
+# Add a dense (fully connected) layer with 128 neurons and ReLU activation
+model.add(Dense(128, name="HiddenLayer1", activation='relu'))
+
+# Add a dense layer with 64 neurons and ReLU activation
 model.add(Dense(64, name="HiddenLayer2", activation='relu'))
+
+# Output dense layer with 2 neurons for binary classification using softmax activation
 model.add(Dense(2, name="OutputLayer", activation='softmax'))
 ```
-
-Let’s break down each line:
-
-- `model = Sequential()`: Initializes a sequential model, which is a linear stack of layers.
-- `model.add(InputLayer((28,28,1), name="InputLayer"))`: Defines the input shape for the model. Here, it expects input images of size 28×28 pixels with 1 channel (e.g., grayscale images).
-- `Conv2D(...)`:
-    - Adds a 2D convolutional layer with 128 filters.
-    - Each filter has a (3,3) kernel size.
-    - `activation='relu'`: Applies the Rectified Linear Unit (ReLU) activation function.
-    - `padding='same'`: Keeps the spatial dimensions unchanged.
-- `MaxPool2D()`: Adds a Max Pooling layer (default (2,2) kernel and stride).
-- `Dropout(rate=0.25)`: Randomly disables 25% of neurons during training to prevent overfitting.
-- Another `Conv2D(...)`: Adds a second convolutional layer with 64 filters.
-- Another `MaxPool2D()`: Further reduces spatial dimensions.
-- `BatchNormalization()`: Normalizes activations for more stable training.
-- `Flatten()`: Converts the multi-dimensional output to 1D for the dense layers.
-- `Dense(128, ...)`: First fully connected layer with 128 neurons and ReLU.
-- `Dense(64, ...)`: Second dense layer with 64 neurons.
-- `Dense(2, activation='softmax')`: Output layer with 2 neurons for binary classification.
-
 
 ---
 

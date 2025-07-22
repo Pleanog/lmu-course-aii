@@ -13,10 +13,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Lecture Slides/2025-07-03-Session-5-LSTM-GAN-keynote-sides.pdf"
+                "file": "Lecture Slides/2025-06-12-Session-4-NN.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "2025-07-03-Session-5-LSTM-GAN-keynote-sides"
+              "title": "2025-06-12-Session-4-NN"
             }
           }
         ]
@@ -38,23 +38,8 @@
               "icon": "lucide-file",
               "title": "Session 04 - Neural Networks"
             }
-          },
-          {
-            "id": "9fc0e25b6311bbf0",
-            "type": "leaf",
-            "state": {
-              "type": "split-diff-view",
-              "state": {
-                "aFile": "Lectures/Session 04 - Neural Networks.md",
-                "bFile": "Lectures/Session 04 - Neural Networks.md",
-                "aRef": ""
-              },
-              "icon": "diff",
-              "title": "Diff: Session 04 - Neural Networks"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -212,22 +197,23 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9fc0e25b6311bbf0",
+  "active": "e0a9019b858545d1",
   "lastOpenFiles": [
+    "Lecture Slides/2025-06-12-Session-4-NN.pdf",
     "Lectures/Session 04 - Neural Networks.md",
+    "Lecture Slides/2025-07-03-Session-5-LSTM-GAN-keynote-sides.pdf",
+    "Lectures/Session 03 - Intro to Neural Networks.md",
+    "Lectures/Session 02 - Intro to Machine Learning.md",
     "Lectures/Session 01 - Artificial Intelligence in Interactive Systems.md",
     "README.md",
     "Untitled.md",
     "ToDO.md",
     "Images/Pasted image 20250722114316.png",
     "Lectures/Session 05 - Long Short-Term Memory & GAN.md",
-    "Lecture Slides/2025-07-03-Session-5-LSTM-GAN-keynote-sides.pdf",
     "Lecture Slides/2025-07-03-Session-5-LSTM-GAN.pdf",
     "Lecture Slides/2025-05-15-Session-2-Intro-to-ML.pdf",
-    "Lectures/Session 02 - Intro to Machine Learning.md",
     "Lecture Slides/tmp-2025-06-12-Session-4-NN-tmp.pdf",
     "Lecture Slides/2025-05-08-Session-1.pdf",
-    "Lecture Slides/2025-06-12-Session-4-NN.pdf",
     "Images/Pasted image 20250722221036.png",
     "Lectures/Session 06 - Large Langage Models (LLM).md",
     "Images/Pasted image 20250722215122.png",
@@ -238,7 +224,6 @@
     "Images/Pasted image 20250722172915.png",
     "Images/Pasted image 20250722170443.png",
     "Images/Pasted image 20250722121411.png",
-    "Lectures/Session 03 - Intro to Neural Networks.md",
     "Lectures/Session 07 - Online Machine Learning.md",
     "Lecture Slides/2025-05-21-Session-3-Intro-to-NN.pdf",
     "Exercises/Possible Exercice Questions.md",
