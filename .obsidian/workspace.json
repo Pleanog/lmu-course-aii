@@ -31,12 +31,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lectures/Session 04 - Neural Networks.md",
+                "file": "Lectures/Session 06 - Large Langage Models (LLM).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Session 04 - Neural Networks"
+              "title": "Session 06 - Large Langage Models (LLM)"
             }
           }
         ]
@@ -199,8 +199,9 @@
   },
   "active": "e0a9019b858545d1",
   "lastOpenFiles": [
-    "Lecture Slides/2025-06-12-Session-4-NN.pdf",
+    "Lectures/Session 05 - Long Short-Term Memory & GAN.md",
     "Lectures/Session 04 - Neural Networks.md",
+    "Lecture Slides/2025-06-12-Session-4-NN.pdf",
     "Lecture Slides/2025-07-03-Session-5-LSTM-GAN-keynote-sides.pdf",
     "Lectures/Session 03 - Intro to Neural Networks.md",
     "Lectures/Session 02 - Intro to Machine Learning.md",
@@ -209,7 +210,6 @@
     "Untitled.md",
     "ToDO.md",
     "Images/Pasted image 20250722114316.png",
-    "Lectures/Session 05 - Long Short-Term Memory & GAN.md",
     "Lecture Slides/2025-07-03-Session-5-LSTM-GAN.pdf",
     "Lecture Slides/2025-05-15-Session-2-Intro-to-ML.pdf",
     "Lecture Slides/tmp-2025-06-12-Session-4-NN-tmp.pdf",

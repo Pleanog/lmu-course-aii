@@ -339,7 +339,6 @@ When predicting continuous outputs, different loss functions are used:
 - Measures the average absolute difference between prediction and target.
 - Less sensitive to outliers.
 - Gradient is constant, which can make learning slow.
-
 #### 🟠 Mean Squared Error (MSE / L2 Loss)
 - Measures the average squared difference between prediction and target.
 - Heavily penalizes larger errors.

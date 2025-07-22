@@ -20,8 +20,6 @@ A historical overview reveals three main branches in the evolution of language m
 2. **Decoder-only models** like **GPT**: Optimized for generative tasks such as writing, summarization, and code generation.
 3. **Encoder-decoder models** like **BART** and **T5**: Hybrid models designed for translation, summarization, and sequence-to-sequence tasks.
 
-> [!example] Klausurrelevant: Explain the difference between encoder-only, decoder-only, and encoder-decoder transformer models.
-
 Earlier steps in this evolution include models like **Word2Vec**, **GloVe**, **ELMo**, and **ULMFiT**, which laid the groundwork by focusing on word embeddings and contextual language representations.
 
 > [!CITE] LLM Development Paths – Interconnects.ai  
@@ -111,7 +109,8 @@ After the Nx decoder blocks, the output goes through:
 - **Feedforward Neural Networks (FFNNs)**: Applied independently to each position.
 - **Positional Encoding**: Adds order awareness since transformers lack recurrence.
 
-> [!TIP] The Transformer architecture scales better and captures long-range dependencies more effectively than RNNs or LSTMs.
+> [!TIP] The Transformer architecture
+> It scales better and captures long-range dependencies more effectively than RNNs or LSTMs.
 
 For more detail: [https://chiranthancv95.medium.com/transformers-attention-is-all-you-need-8de139e0fe9e](https://chiranthancv95.medium.com/transformers-attention-is-all-you-need-8de139e0fe9e)
 
@@ -164,7 +163,7 @@ Word embeddings can capture **semantic relationships** as **vector directions**.
 This works because:
 - The vector from **man → woman** encodes the **gender dimension**.
 - Applying this **same vector offset** to **king** shifts it along the same gender axis, landing near **queen**.
-> [!TIP] It shows that embeddings don’t just store meaning — they capture **relationships between meanings** as directions in space.
+> [!TIP] It shows that embeddings don’t just store meaning, they capture **relationships between meanings** as directions in space.
 
 > [!question] _How do embeddings capture similarity?_  
 Embeddings use the **distributional hypothesis**: “You shall know a word by the company it keeps.” If two words appear in similar contexts, their embeddings are adjusted during training to become similar.
@@ -187,7 +186,8 @@ These probabilities are passed through a **Softmax function** to normalize them.
 > - **Softmax** converts raw scores into probabilities.
 > - **Temperature** controls randomness. Lower temperature makes output more deterministic; higher allows for more diversity.
 
-> [!TIP] Temperature is like a creativity dial — crank it up for poems, turn it down for factual answers.
+> [!TIP] Temperature is like a creativity dial
+> We can crank it up for poems, turn it down for factual answers.
 
 - Temperature Explained: [https://medium.com/@nigelgebodh/why-does-my-llm-have-a-temperature-f2e314a52086](https://medium.com/@nigelgebodh/why-does-my-llm-have-a-temperature-f2e314a52086)
 
@@ -229,7 +229,8 @@ So how does the LLM figure out the right interpretation?
 | a lot of glue | glue              | Emphasizes the material; this cluster likely has internal attention |
 | glue          | model             | “Glue” refers back to the object that requires it — again, “model”  |
 
-> [!TIP] This is a **bidirectional flow** — while processing “glue”, the model recalls “model” to figure out what the glue is needed for.
+> [!TIP] This is a **bidirectional flow**
+> While processing “glue”, the model recalls “model” to figure out what the glue is needed for.
 	
 3. **Going from “Generic Model” to “Plane Model”**
 	- LLMs use **word embeddings** where words have multiple possible meanings (polysemy). The base word “model” might sit near many clusters in vector space: one for **scientific models**, one for **fashion models**, one for **physical models** like **airplanes**.
@@ -244,7 +245,8 @@ So how does the LLM figure out the right interpretation?
 
 “A lot of glue” is highly **specific** and **concrete**. Glue is **rarely associated with abstract models** (mathematical, conceptual) but is **highly associated with physical models**, like plastic kits or wood crafts, so it's alignment is closest with the vector of a model (plane) - in the grafic pointing to the top right coner in the vector space
 
-> [!TIP] Attention doesn’t just “look around” — it **reweights word meaning based on neighboring words**. In this case, it acts like a semantic lens, refocusing “model” based on the dominant signal from “glue”.
+> [!TIP] Attention doesn’t just “look around”
+> It **reweights word meaning based on neighboring words**. In this case, it acts like a semantic lens, refocusing “model” based on the dominant signal from “glue”.
 
 ---
 
@@ -318,9 +320,4 @@ LLMs are already widely used in:
 - **Conversational agents** (e.g., ChatGPT)
 - **Browser tools**
 
-UIs for LLMs are evolving, with examples like Bret Victor's "Future of Programming" vision and multimodal systems that integrate deeply with user workflows.
-
-> [!TIP] Future UI design will likely integrate LLMs as background agents, silently improving user experience.
-
 ---
-	
