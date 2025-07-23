@@ -12,8 +12,6 @@ Large Language Models (LLMs) are a class of machine learning models that can gen
 ## Development of LLMs
 
 A historical overview reveals three main branches in the evolution of language models:
-
-
 ![[Pasted image 20250713223653.png]]
 
 1. **Encoder-only models** like **BERT**: Best suited for understanding tasks such as classification, entity recognition, and sentiment analysis.

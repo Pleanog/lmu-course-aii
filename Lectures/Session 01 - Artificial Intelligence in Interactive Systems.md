@@ -98,7 +98,7 @@ A common misconception is that GANs simply "augment" data like filters. In reali
 
 
 ![[Pasted image 20250508112706.png]]
-
+![[Pasted image 20250723105600.png]]
 ### a) Simulator Network
 
 The Simulator Network is designed to generate synthetic images of fiducial markers pressed against a capacitive screen, aiming to be indistinguishable from real observations. It operates as a Generative Adversarial Network (GAN).
@@ -200,7 +200,7 @@ These systems are often **Human-in-the-Loop**:
 
 ### Models
 
-*We will look into these further down the line*
+*We will look into some these further down the line*
 
 **Models:**
 - “Traditional” Machine Learning
