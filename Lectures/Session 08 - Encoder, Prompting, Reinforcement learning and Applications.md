@@ -64,24 +64,18 @@ This allows the model to generate new samples by sampling from the **latent dist
 
 ## Sequence-to-Sequence Learning: Language to Language Translation
 
-Sequence-to-sequence learning is a method used when both the input and output are sequences — for example, **translating a sentence** from English to German.
-
----
-
-### 🔗 **How does it work?**
-
-We can use **two LSTM networks** as Encoder and Decoder in order to translate language::
+This can be used when both the input and output are sequences. Like **translating a sentence** from English to German:
 
 ![[Pasted image 20250724102315.png]]
 
-#### 1. **Encoder**
+1. **Encoder**:
 - Takes the **input sentence** word-by-word, e.g.  
     `Good → morning → everyone`
 - Each word is passed **one at a time** into the LSTM.
 - The LSTM "remembers" the meaning and structure as it goes — storing it in its hidden state.
 - At the end, the encoder compresses the **entire sentence's meaning** into a **fixed-size vector** (called a _context vector_).
 
-#### 2. **Decoder**
+1. **Decoder**:
 - Starts with the **context vector** from the encoder.
 - Then it **generates one word at a time** in the target language, e.g.  
     `Guten → Morgen → zusammen`
