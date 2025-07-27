@@ -6,17 +6,82 @@
       {
         "id": "afd53396352c0369",
         "type": "tabs",
+        "dimension": 46.02091859936335,
         "children": [
           {
             "id": "db99fdd770325c81",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Lecture Slides/2025-07-10-Session-6-LLM.pdf"
+                "file": "Lectures/Session 08 - Encoder, Prompting, Reinforcement learning and Applications.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "2025-07-10-Session-6-LLM"
+              "icon": "lucide-file",
+              "title": "Session 08 - Encoder, Prompting, Reinforcement learning and Applications"
+            }
+          },
+          {
+            "id": "362f4cf013a3609e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lectures/Session 01 - Artificial Intelligence in Interactive Systems.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Session 01 - Artificial Intelligence in Interactive Systems"
+            }
+          },
+          {
+            "id": "3747efc35037e20e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lectures/Session 08 - Q & A.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Session 08 - Q & A"
+            }
+          }
+        ],
+        "currentTab": 2
+      },
+      {
+        "id": "ec6c5459055c79ba",
+        "type": "tabs",
+        "dimension": 53.97908140063665,
+        "children": [
+          {
+            "id": "6ed5b98579793008",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lectures/Session 08 - Encoder, Prompting, Reinforcement learning and Applications.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Session 08 - Encoder, Prompting, Reinforcement learning and Applications"
+            }
+          },
+          {
+            "id": "c8462dde00e41c33",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Images/Pasted image 20250725100815.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20250725100815"
             }
           }
         ]
@@ -51,7 +116,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Generator",
+                "query": "kernel",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -76,7 +141,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 274.5110321044922
+    "width": 330.5110321044922
   },
   "right": {
     "id": "191808e863dbc7c1",
@@ -177,39 +242,40 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "db99fdd770325c81",
+  "active": "3747efc35037e20e",
   "lastOpenFiles": [
-    "Lecture Slides/2025-07-03-Session-5-LSTM-GAN-keynote-sides.pdf",
-    "Images/Pasted image 20250723102124.png",
+    "Lectures/Session 08 - Encoder, Prompting, Reinforcement learning and Applications.md",
+    "Lectures/Session 08 - Q & A.md",
+    "Images/Pasted image 20250725100815.png",
+    "Lecture Slides/2025-07-24-Session-8-Encoder-Prompting-Reinforcementlearning-ApplicationsF.pdf",
     "Lectures/Session 01 - Artificial Intelligence in Interactive Systems.md",
-    "Images/Pasted image 20250723105600.png",
-    "Lecture Slides/2025-05-08-Session-1.pdf",
-    "Lectures/Session 05 - Long Short-Term Memory & GAN.md",
-    "Lecture Slides/2025-07-03-Session-5-LSTM-GAN.pdf",
-    "Lectures/Session 06 - Large Langage Models (LLM).md",
-    "Images/Pasted image 20250723105226.png",
-    "Images/Pasted image 20250723105145.png",
-    "Images/Pasted image 20250723104855.png",
-    "Images/Pasted image 20250723104723.png",
-    "Images/Pasted image 20250723104530.png",
-    "Images/Pasted image 20250723103224.png",
-    "Images/Pasted image 20250723102705.png",
-    "Images/Pasted image 20250723102554.png",
-    "Lecture Slides/2025-06-12-Session-4-NN.pdf",
-    "Lectures/Session 04 - Neural Networks.md",
-    "Lectures/Session 03 - Intro to Neural Networks.md",
-    "Lectures/Session 02 - Intro to Machine Learning.md",
-    "README.md",
-    "Untitled.md",
-    "ToDO.md",
-    "Lecture Slides/2025-05-15-Session-2-Intro-to-ML.pdf",
-    "Lecture Slides/tmp-2025-06-12-Session-4-NN-tmp.pdf",
-    "Lectures/Session 07 - Online Machine Learning.md",
-    "Lecture Slides/2025-05-21-Session-3-Intro-to-NN.pdf",
-    "Exercises/Possible Exercice Questions.md",
-    "Exercises",
+    "Images/Pasted image 20250727150522.png",
+    "Images/Pasted image 20250727150701.png",
+    "Images/Pasted image 20250727150614.png",
     "Reading/Recordings.md",
-    "Lecture Slides/tmp-2025-05-15-Session-2-Intro-to-ML.pdf",
-    "Lecture Slides/2025-07-17-Session-7-PML_2025_OnlineMachineLearning.pdf"
+    "Images/Pasted image 20250727144443.png",
+    "Images/Pasted image 20250727145017.png",
+    "Images/Pasted image 20250727144800.png",
+    "Images/Pasted image 20250727144559.png",
+    "Lectures/Session 05 - Long Short-Term Memory & GAN.md",
+    "Images/Pasted image 20250725150718.png",
+    "Lectures/Session 04 - Neural Networks.md",
+    "Images/Pasted image 20250725145954.png",
+    "Lectures/Session 02 - Intro to Machine Learning.md",
+    "Lectures/Session 06 - Large Langage Models (LLM).md",
+    "Lectures/Session 03 - Intro to Neural Networks.md",
+    "Lecture Slides/2025-05-08-Session-1.pdf",
+    "Lectures/Session 07 - Online Machine Learning.md",
+    "Lecture Slides/2025-07-24-Seesion-8-OpenDiscussion.pdf",
+    "Lecture Slides/2025-07-17-Session-7-PML_2025_OnlineMachineLearning.pdf",
+    "Lecture Slides/Nicht bestätigt 766997.crdownload",
+    "Lecture Slides/Nicht bestätigt 891199.crdownload",
+    "Lecture Slides/2025-05-15-Session-2-Intro-to-ML.pdf",
+    "Lecture Slides/2025-07-10-Session-6-LLM.pdf",
+    "Lecture Slides/2025-07-03-Session-5-LSTM-GAN-keynote-sides.pdf",
+    "Lecture Slides/2025-07-03-Session-5-LSTM-GAN.pdf",
+    "README.md",
+    "ToDO.md",
+    "Exercises/Possible Exercice Questions.md"
   ]
 }

@@ -3,8 +3,7 @@
 
 ### Model Layers
 
-It's essential to understand basic neural network layers:
-
+It's essential to **understand these two types basic neural network layers**:
 - **Dense Layer**:Each input neuron is connected to every output neuron, making it suitable for general-purpose pattern recognition where input features are independent.
 - **CNN Layer (Convolutional Neural Network Layer)**: CNNs are designed to build an understanding by analyzing neighboring inputs in an n-dimensional space. They are particularly effective for tasks involving spatial relationships, such as image processing.
 
@@ -182,7 +181,7 @@ The Generator and Discriminator are trained in an adversarial manner, improving 
 
 GANs are also highly effective for **Super Resolution**, a technique to enhance the resolution of images. This involves generating high-resolution (HR) images from low-resolution (LR) inputs, hallucinating details that were not present in the original.
 
-*This is explained aswell in detail in the section 1*
+*This is explained quite well in detail in the section 1*
 
 ![[Pasted image 20250723105226.png]]
 

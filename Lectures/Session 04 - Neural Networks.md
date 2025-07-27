@@ -1,5 +1,6 @@
-
 # Convolutional Neural Networks (CNNs)
+
+*We will lokk into the MNIST set later but a good interactive example of CNNs can be found here:[Basic Convnet for MNIST](https://transcranial.github.io/keras-js/#/mnist-cnn).* 
 
 Convolutional Neural Networks (CNNs) are a class of deep learning models primarily designed for analyzing visual imagery. They are inspired by the organization of the animal visual cortex and are particularly effective at identifying **patterns in images.**
 
@@ -207,16 +208,20 @@ model.add(Dense(2, name="OutputLayer", activation='softmax'))
     Each 28×28 pixel image is flattened into a long row of 784 numbers (28×28 = 784). These are the pixel brightness values.
 - **Dense(256)**:  
     First fully connected layer with 256 neurons. Every input is connected to every neuron.  
-    This layer starts learning patterns — maybe strokes or loops from digits.
-- **Dense(128) with Dropout 0.5*:  
-    Another dense layer with 128 neurons, **but with dropout** — so only every second neuron is used.  This layer refines the learned features further, like distinguishing a ‘5’ from a ‘6’.
+    This layer starts learning patterns, maybe strokes or loops from digits. It is using the sobel-kernel.
+- **Dense(128) with Dropout 0.5**:  
+    Another dense layer with 128 neurons, but **with dropout**, so only every second neuron is used.  This layer refines the learned features further, like distinguishing a ‘5’ from a ‘6’.
 - **Dense(10) with Dropout 0.5**:  
     Final output layer. There are **10 neurons**, one for each digit (0–9).  
-    The model outputs **10 probabilities** — whichever is highest is the model’s guess!
+    The model outputs **10 probabilities**, whichever is highest is the model’s guess!
     Again with a dropout of 0,5 before the output!
+
+A little different in the execution but still nice interactive 'explanation': [Basic Convnet for MNIST](https://transcranial.github.io/keras-js/#/mnist-cnn).* 
 
 > [!question] What if we had a dropout of 0.5 after the last  output layer?
 > We'd be randomly "turning off" 50% of the **10 output neurons**, which means **some digits might never be predicted** during training! That would be bad!
+
+For a deeper understanding read: [# Convolutional Neural Network (CNN): A Complete Guide](https://learnopencv.com/understanding-convolutional-neural-networks-cnn/)
 
 ---
 
@@ -635,14 +640,14 @@ Hyperparameter tuning is the process of optimizing **model configuration choices
 - **Regularization techniques** (e.g. dropout),
 - And **training behavior** (e.g. batch size, early stopping).
 
-| Element                 | Tunable?     | Role in Hyperparameter Tuning                                                       |
-| ----------------------- | ------------ | ----------------------------------------------------------------------------------- |
-| **Model structure**     | ✅            | Number of layers, hidden units—crucial for capacity.                                |
-| **Loss function**       | ⚠️ Sometimes | Usually fixed, but some variants (e.g. weighted loss) can be tuned.                 |
-| **Optimizer**           | ✅            | Choosing between SGD, Adam, RMSProp, etc. affects convergence.                      |
-| **Learning rate**       | ✅            | One of the most critical hyperparameters—controls step size in gradient descent.    |
-| **Dropout rate**        | ✅            | Helps prevent overfitting—tuned to balance regularization.                          |
-| **Batch normalization** | ⚠️ Kind of   | It’s usually a design choice, not tuned frequently, but can affect tuning dynamics. |
+| Element                 | Tunable?  | Role in Hyperparameter Tuning                                                       |
+| ----------------------- | --------- | ----------------------------------------------------------------------------------- |
+| **Model structure**     | yes       | Number of layers, hidden units—crucial for capacity.                                |
+| **Loss function**       | sometimes | Usually fixed, but some variants (e.g. weighted loss) can be tuned.                 |
+| **Optimizer**           | yes       | Choosing between SGD, Adam, RMSProp, etc. affects convergence.                      |
+| **Learning rate**       | yes       | One of the most critical hyperparameters—controls step size in gradient descent.    |
+| **Dropout rate**        | yes       | Helps prevent overfitting—tuned to balance regularization.                          |
+| **Batch normalization** | kind of   | It’s usually a design choice, not tuned frequently, but can affect tuning dynamics. |
 Unlike model parameters (like weights), **hyperparameters are chosen _externally_**, often via search and experimentation.
 
 ---
@@ -771,3 +776,12 @@ model.add(Dense(5, activation='softmax'))
 
 > [!tip]  
 > This is called **Transfer Learning**: using knowledge from one model (ImageNet) and adapting it to a new task (e.g. 5 classes).
+
+---
+
+## Understanding a Model (VGG16)
+
+![[Pasted image 20250725150718.png]]
+
+
+Until 17. august

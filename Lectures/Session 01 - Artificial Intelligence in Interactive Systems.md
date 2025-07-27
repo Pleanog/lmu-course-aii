@@ -1,6 +1,9 @@
 ## Introduction to Machine Learning
 
-Machine Learning is a subset of AI that enables systems to learn from data without explicit programming. 
+Machine Learning is a subset of AI that enables systems to learn from data without explicit programming for a concrete problem. 
+
+> [!hint] A *really* good quick introduction!
+> If you want to get a quick understanding of the basic topics in ths 'script' and also a little headstart you might want to read this short *interactive* blog article, as it is a great starting point:  [What is a Convolutional Neural Network?](https://poloclub.github.io/cnn-explainer/).
 
 > [!CITE] Ubiquitous Computing - Mark Weiser
 > "The most profound technologies are those that disappear. They weave themselves into the fabric of everyday life until they are indistinguishable from it" "...Hundreds of computers in a room could seem intimidating at first, [...] these hundreds of computers will come to be invisible to common awareness. People will simply use them unconsciously to accomplish everyday tasks."
@@ -12,7 +15,7 @@ Machine Learning is a subset of AI that enables systems to learn from data witho
 
 **Enhancing Touch Input through Machine Learning**
 
-Instead of only interpreting the 2D touch coordinate passed through the touch-screen to the kernel of a smartphone, ML allows for the reconstruction of the **entire "blob"**—the real contact area detected by the display.
+Instead of only interpreting the 2D touch coordinate passed through the touch-screen to the kernel of a smartphone, ML allows for the reconstruction of the **entire "blob"**, the real contact area detected by the display.
 
 ![[Pasted image 20250508112224.png]]
 
@@ -32,23 +35,6 @@ This kind of interaction significantly enhances expressiveness in touch-based in
 > Because these often struggle with variability and complexity in real-world data. They can be brittle, meaning slight variations in input can lead to large errors, and they require significant human effort to design and maintain.
 
 The shift from handcrafted algorithms to deep learning methods enables more robust and adaptable systems for human-computer interaction, as the models can automatically extract complex patterns and generalize better to new scenarios.
-
----
-
-### Enhancing Touch Input through Machine Learning
-
-Machine learning (ML) can be used to enrich the understanding of user input on capacitive touchscreens. Instead of only interpreting the 2D touch coordinate passed through the kernel of a smartphone, ML allows for the reconstruction of the **entire "blob"**—the real contact area detected by the display.
-
-![[Pasted image 20250508112224.png]]
-
-By analyzing this blob, ML models can extract features such as **pitch and yaw of the finger**—indicating the angle at which the finger touches the screen. This opens the door to more nuanced gestures and controls.
-
-Moreover, ML can potentially identify **which finger is touching the screen**, enabling **multi-finger differentiation** for UI interactions. For instance:
-
-> [!CITE] Finger-Specific Interaction Paradigm  
-> "A finger could draw in blue in a drawing app, while another finger is mapped to draw in red."
-
-This kind of interaction significantly enhances expressiveness in touch-based interfaces.
 
 ---
 
@@ -182,7 +168,6 @@ Dialog systems that operate in physical environments must **share control** with
 
 ![[Pasted image 20250508114047.png]]
 
-
 > 🔍 **Negotiation Process:**  
 > A method where the system and user align their goals through dialog. The system asks for clarifications, confirms understanding, and adapts its behavior accordingly.
 
@@ -197,22 +182,11 @@ These systems are often **Human-in-the-Loop**:
 > It helps align machine behavior with human intent, especially in dynamic, shared environments where assumptions must be confirmed.
 
 ---
-
 ### Models
-
 *We will look into some these further down the line*
 
-**Models:**
-- “Traditional” Machine Learning
-- Support Vector Machines
-- Decision Trees
-- Random Forest
-- …
-**“Deep” Learning Methods**
-- Neuronal Networks
-- Convolutional Neuronal Networks
-- Recurrent Neural Network (RNN)
-- Generative Adversarial Network (GAN)
-- ...
- 
+| **Models**                                                                                                  | **“Deep” Learning Methods**                                                                                                                     |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| - “Traditional” Machine Learning<br>- Support Vector Machines<br>- Decision Trees<br>- Random Forest<br>- … | - Neuronal Networks<br>- Convolutional Neuronal Networks<br>- Recurrent Neural Network (RNN)<br>- Generative Adversarial Network (GAN)<br>- ... |
+
 ---

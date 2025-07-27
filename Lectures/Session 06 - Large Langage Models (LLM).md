@@ -3,6 +3,8 @@ It seems a lot of this lecture is based a lot on these articles:
 -  [The GPT-3 Architecture, on a Napkin](https://dugas.ch/artificial_curiosity/GPT_architecture.html)
 - [Transformers…Attention is all you need!](https://chiranthancv95.medium.com/transformers-attention-is-all-you-need-8de139e0fe9e)
 
+To understand LLMs Architecture better this interactive visualisation is a great, even if it is a bit out of the scope of the lecture: [LLM Visualization, by Brendan Bycroft](https://bbycroft.net/llm)
+
 ## Large Language Models (LLMs)
 
 Large Language Models (LLMs) are a class of machine learning models that can generate natural language by predicting the next word in a sequence based on previous context. This predictive ability enables a variety of applications, from chatbots to code completion and beyond.
