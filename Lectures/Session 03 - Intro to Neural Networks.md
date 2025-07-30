@@ -119,15 +119,14 @@ This definition means:
 
 ### Other types of activation functions
 
-![[Pasted image 20250605111522.png]]
-
+![[Pasted image 20250730200939.png]]
 ### Quick Summary
 
-- **Sigmoid**: Great for yes/no decisions. A binary choice, like deciding to attend a concert based on cost.
+- **Sigmoid**: Great for yes/no decisions. A binary choice, like is this mail spam or not (used for binary classification).
 - **Tanh**: Useful for handling positive/negative distinctions, like scoring with both positive and negative values.
 - **ReLU**: Ideal for ignoring minor or negative values and focusing on stronger signals, like only responding to loud sounds.
 - **Leaky ReLU**: Adds a small response to negative values to prevent “dead” spots, like a dripping faucet.
-- **Softmax**: Give a probability across multiple options, like choosing a favorite flavor with weighted preferences.
+- **Softmax**: Give a probability across multiple options, like choosing a favorite flavor with weighted preferences (used for multi-class classification).
 [# Types of Activation Functions: Sigmoid tanh, ReLU, Softmax. Part 1](https://www.linkedin.com/pulse/types-activation-functions-sigmoid-tanh-relu-softmax-part-dave-uipuc/)
 
 
@@ -176,9 +175,7 @@ Training a neural network involves iteratively adjusting its trainable parameter
 ### Optimization: Stochastic Gradient Descent
 
 Stochastic Gradient Descent (SGD) is a widely used optimization algorithm for training neural networks. Its goal is to find the direction in which the cost function needs to be minimized.
-
-![[Pasted image 20250605103842.png]]
-
+![[Pasted image 20250730201033.png]]
 The process involves calculating the gradient (slope) of the cost function with respect to each weight and bias. The gradient indicates the direction of the steepest ascent; to minimize the cost, we move in the opposite direction (down the slope).
 - **Learning Rate**: The "learning rate" determines the size of the steps taken in the direction of the negative gradient. Initially, larger steps might be taken, which then decrease as the model approaches the optimal solution.
 - **Batch Size**: To prevent overfitting to individual input examples and to make the training process computationally feasible, the gradient is typically calculated not for every single input, but for a "batch" of inputs. This "batch size" dictates how many input examples are processed together in each optimization step.
@@ -260,9 +257,7 @@ Common approaches for scaling RGB image data (typically 0-255 values):
 ## Sliding window
 
 This is used to transform sequential or spatial data into a format suitable for machine learning models. It involves moving a fixed-size "window" across the data, extracting segments that serve as individual input samples. This is particularly common in areas like time series analysis, signal processing, and image processing.
-
-![[Pasted image 20250717234735.png]]
-![[Pasted image 20250717234802.png]]
+![[Pasted image 20250730201126.png]]
 > w = window length
 > s = stride aka “step size”
 > 🔍 The "step size" (or stride) refers to how many units the window moves forward each time.
@@ -299,14 +294,13 @@ Data augmentation is a critical technique to address the common issue of insuffi
 One common data augmentation technique is adding noise to the data. This can help make the model more robust to variations and imperfections in real-world data.
 
 - **"True" Random Noise**: Adding completely random fluctuations to the data.
-    ![[Pasted image 20250718000629.png]]"true" because the random functions in every computer are not true random.
+	![[Pasted image 20250730201231.png]]
     
 - **Normal Random Noise**: Adding noise drawn from a normal (Gaussian) distribution.
-    ![[Pasted image 20250718000805.png]]
+    ![[Pasted image 20250730201256.png]]
 	   
 - **Perlin Noise**: A type of gradient noise often used to generate natural-looking textures and patterns. It adds a smooth curve as we do not want jittery noises everythigng in the world usually has more gradients than hard edges.
-    ![[Pasted image 20250718000827.png]]
-
+    ![[Pasted image 20250730201335.png]]
 ### General Data Augmentation Ideas
 
 Beyond adding noise, various other transformations can be applied, especially for image data:

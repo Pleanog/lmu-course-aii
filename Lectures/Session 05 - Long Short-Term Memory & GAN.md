@@ -19,8 +19,7 @@ Many real-world problems involve data where the order of elements matters. RNNs 
 
 ### Recurrent Neural Network (RNN) Core Concept
 
-![[Pasted image 20250723102239.png]]
-
+![[Pasted image 20250730201548.png]]
 
 Unlike feed-forward networks, RNNs have connections that loop back on themselves, allowing them to maintain an internal "memory" or **hidden state** that captures information from previous inputs in a sequence. This makes them suitable for sequential data where context from prior steps is essential.
 
@@ -33,15 +32,14 @@ The difference  lies in this recurrent connection.
 
 For an RNN to processes a sequence, it can be "unrolled" over time. This shows a series of identical RNN units, where the output of one unit at time step `t-1` becomes an input to the next unit at time step `t`.
 
-![[Pasted image 20250723102554.png]]
-
+![[Pasted image 20250730201620.png]]
 For a sequence of inputs
 
 `x0, x1, x2, ..., xn`, the RNN produces corresponding outputs `y0, y1, y2, ..., yn`, with each `a(x)` unit passing information forward in time.
 
 ### A typical RNN cell
 
-![[Pasted image 20250723102705.png]]
+![[Pasted image 20250730201649.png]]
 
 At time step `t` the cell takes two inputs: the current input $x_t$ and the hidden state from the previous time step $h_{t-1}$. It then computes a new hidden state $h_t$ and an output $y_t$. The `tanh` activation function is often used within the RNN cell to introduce non-linearity.
 
@@ -148,8 +146,7 @@ GANs have revolutionized various fields due to their ability to generate diverse
 - **Create Data**: Generating new, realistic data points, such as images of human faces that do not exist.
 - **Style Transfer**: Transforming the style of an image while preserving its content, or vice-versa.
 - **Increase Image Resolution (Super-Resolution)**: Enhancing low-resolution images to high-resolution ones, adding detail that was not present in the original.
-
-![[Pasted image 20250723104723.png]]
+![[Pasted image 20250730201805.png]]
 > **Example of "Edges to Photo" is the** `edges2handbags` tool, which allows users to sketch handbag outlines, and a GAN (specifically, a pix2pix model) then generates a photorealistic image of a handbag based on the sketch. 
 
 ---
@@ -182,7 +179,6 @@ The Generator and Discriminator are trained in an adversarial manner, improving 
 GANs are also highly effective for **Super Resolution**, a technique to enhance the resolution of images. This involves generating high-resolution (HR) images from low-resolution (LR) inputs, hallucinating details that were not present in the original.
 
 *This is explained quite well in detail in the section 1*
-
-![[Pasted image 20250723105226.png]]
+![[Pasted image 20250730201934.png]]
 
 ---
