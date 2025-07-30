@@ -12,8 +12,10 @@ Machine Learning (ML) encompasses various problem types, primarily distinguished
 > - Classification → predict **categories** (like cats, dogs, birds)
 > - Regression → predict **continuous values** (like angles, prices, or durations)
 
+![[Pasted image 20250730185116.png]]
+> [# Supervised vs. Unsupervised Learning](https://www.labellerr.com/blog/supervised-vs-unsupervised-learning-whats-the-difference/)
 #### Supervised vs. Unsupervised Learning
-- **Supervised Learning** involves training a model on a labeled dataset, meaning that each training example is paired with an output label. The model learns to predict the output from the input data.
+- **Supervised Learning** training a model on a labeled dataset. Each training example is paired with an output label. The model learns to predict the output from the input data.
 - **Unsupervised Learning** deals with unlabeled data. The model tries to learn the underlying structure from the input data without explicit instructions on what to predict.
 #### Discrete vs. Continuous Data
 - **Discrete Data**: Represents distinct and separate values. For example, classifying animals as 'domestic' or 'wild' is a discrete task.
@@ -24,7 +26,7 @@ Machine Learning (ML) encompasses various problem types, primarily distinguished
 
 Let’s say we have a dataset of animal emojis, each labeled: `"cat"`, `"horse"`, `"dog"`, `"gorilla"`, etc. We train a model on these **labeled examples**. During training, the model learns **which weights and biases** produce the correct decisions.
 
-Once trained, the model can make predictions on **unseen data** — e.g., it receives a new emoji and classifies it as a "dog" based on the patterns it learned.
+Once trained, the model can make predictions on **unseen data**; e.g., it receives a new emoji and classifies it as a "dog" based on the patterns it learned.
 
 ![[Pasted image 20250515105939.png]]
 
@@ -36,8 +38,8 @@ One clustering idea could be:
 - Group emojis by **physical features**, such as "has legs" vs. "no legs" (e.g., 🐕 vs. 🐍).  
 - Another idea: Cluster by **head vs. full-body** images.
 
-> **What can we learn just from looking at the data?**  
-> We can observe visible traits like:
+**What can we learn just from looking at the data?**  
+We can observe visible traits like:
 - Full animal vs. just a head.  
 - Has legs or no legs.
 - Possibly infer if it’s a domestic or wild animal.
@@ -49,25 +51,24 @@ These visual features can be the **basis for clustering**, even without any labe
 #### **What about Binned Data?**
 → Let’s say we **manually group** (or "bin" = 🚮) animals into categories like `"domestic"` and `"wild"`. This adds structure to the dataset.
 
-> **What can we do with binned data?**  
-> We can now:
+**What can we do with binned data?**  
 - Analyze how many animals fall into each category.
 - Compare domestic vs. wild animals statistically.
 - Train a **supervised model** if we use the bin labels as targets.
 
-> **What happens if we add more unlabelled animals to the binned dataset?**  
-> The new animals won't have a category yet. A supervised model **cannot use them for training**, but an unsupervised algorithm might try to:
+**What happens if we add more unlabelled animals to the binned dataset?**  
+The new animals won't have a category yet. A supervised model **cannot use them for training**, but an unsupervised algorithm might try to:
 - **Infer new groupings**, potentially suggesting a third cluster.
 - **Alter existing clusters** if it sees the new data as similar to existing groups.
 
-This is how unsupervised learning adapts — but it's also **unstable**: each run may result in different groupings.
+This is how unsupervised learning adapts but it's also **unstable**: each run may result in different groupings.
 
->[!tip] You can combine learning types  
+>[!tip] We can combine learning types  
 One strategy is to first use **unsupervised learning** to cluster unknown data, then **manually label** those clusters and switch to **supervised learning** for a more stable model.
 
  > [!question] What happens if we mix labeled and unlabeled data?
 We can not use supervised learning directly with unlabeled data, because supervised learning needs labels to learn from.
-But you can use a **new approach** called **semi-supervised learning** — it combines both labeled and unlabeled data. Here's how:
+But we can use a **new approach** called **semi-supervised learning**; it combines both labeled and unlabeled data. Here's how:
 >- The model learns from the small labeled set.
 >- Then it tries to **guess labels** for the unlabeled data based on what it learned.
 >- These guesses can then be used to improve the model further.
@@ -80,8 +81,8 @@ The model does this by:
 - Discovering patterns or clusters.
 - Identifying data points that **don’t fit** any pattern well.
 
-> **Why is this difficult for humans?**  
-> Because the clusters created:
+**Why is this difficult for humans?**  
+Because the clusters created:
 - Don’t have **meaningful names**.
 - May change **every time** the algorithm runs.
 - Require humans to manually **interpret or relabel** the clusters.
@@ -99,7 +100,7 @@ We can plot these data points in a coordinate system where each point represents
 
 ![[Pasted image 20250515104741.png]]
 
-- **Support Vectors**: The **data points closest to the decision boundary**. These points lie on the edge of the margin and are crucial because they **directly influence the position and orientation** of the separating line (hyperplane). If you removed them, the boundary would shift.
+- **Support Vectors**: The **data points closest to the decision boundary**. These points lie on the edge of the margin and are crucial because they **directly influence the position and orientation** of the separating line (hyperplane). If we removed them, the boundary would shift.
 - **Margin**: The **distance between the decision boundary and the nearest support vectors** from each class. SVM tries to **maximize this margin**, creating the widest possible separation between the classes to improve generalization.
 	- Decision Boundary: "Emails on this side are spam; emails on that side are not spam. Emails exactly on the line are uncertain the probability of spam/not spam is 50/50"
 
@@ -170,13 +171,10 @@ So, while the **position** of an email in the feature space is based on numeric 
 ### Input and Output Vectors
 
 In the email classification example:
-
 - **Input Vector (Features)**: Represents the characteristics of an email, e.g., word frequencies, sender reputation.
 - **Output Vector (Label)**: Represents the class label, e.g., [1, 0] for 'spam', [0, 1] for 'not spam'.
 
-
 ---
-
 ### Non-Linear Classification and Overfitting
 
 - **Non-Linear Classification**: When data is not linearly separable, SVMs can use kernel functions to project data into higher-dimensional spaces where a linear separator is feasible.
@@ -226,15 +224,15 @@ In a 2D space, SVR predicts a continuous value for each data point. The gradient
 The **RBF kernel** (also called the **Gaussian kernel**) is a popular choice for non-linear SVM and SVR models. It maps input features into higher-dimensional spaces, allowing the model to capture complex patterns. It measures similarity between two data points `x` and `x'`:
 
 > [!TIP] **SVR Model Complexity**
-The power of an SVR (Support Vector Regressor) depends on the **kernel** used. A **Linear SVR** fits only a straight line — so its "expressive power" is limited - just spam or not spam. In contrast, an **SVR with a non-linear kernel** (like RBF or polynomial) can fit **curved patterns**, even with multiple bends or sections (e.g. 6 segments in a polynomial curve). This allows it to model complex relationships **without necessarily overfitting**.
+The power of an SVR (Support Vector Regressor) depends on the **kernel** used. A **Linear SVR** fits only a straight line; so its "expressive power" is limited - just spam or not spam. In contrast, an **SVR with a non-linear kernel** (like RBF or polynomial) can fit **curved patterns**, even with multiple bends or sections (e.g. 6 segments in a polynomial curve). This allows it to model complex relationships **without necessarily overfitting**.
 >
 **Explaining the Image:**  
 The coordinate system shows **data points (here emails)**,
->- The **color gradient from blue to green** represent the **SVR's predicted value or score** for each point — e.g., spam probability
+>- The **color gradient from blue to green** represent the **SVR's predicted value or score** for each point. E.g., spam probability
 >- The **shaded regions** around the points (blue-to-green) show **model confidence or decision boundaries**: areas where similar values are predicted. The color of the region corresponds to the predicted values of nearby dots.
 
 **Takeaway:**  
-The use of color gradients and complex regions in the image suggests that the SVR is capturing **subtle patterns** in the data — which is only possible with a **non-linear SVR** (like RBF or polynomial). This flexibility is what gives SVR its **real predictive power**.
+The use of color gradients and complex regions in the image suggests that the SVR is capturing **subtle patterns** in the data, which is only possible with a **non-linear SVR** (like RBF or polynomial). This flexibility is what gives SVR its **real predictive power**.
 
 Where:
 - `γ` (gamma) defines the **influence range** of a single training example.
@@ -312,11 +310,11 @@ The objective in K-means clustering is to minimize the sum of squared distances 
 Dimensionality reduction is an unsupervised learning technique that involves transforming high-dimensional data into a lower-dimensional space. This process is crucial for simplifying data, reducing noise, and making it easier to visualize and analyze.
 
 ![[Pasted image 20250717210823.png]]
-https://www.geeksforgeeks.org/machine-learning/dimensionality-reduction/
+> [Dimensionality Reduction](https://www.geeksforgeeks.org/machine-learning/dimensionality-reduction/)
 
 One of the prominent methods for dimensionality reduction is **Principal Component Analysis (PCA)**. PCA aims to reduce the number of features (dimensions) in a dataset while retaining as much variance as possible.
 
-This means that if you have $n$ features $(x_1​,…,xn_​)$ where $n$ is large, PCA can reduce it to $m$ features $(x_1​,…,x_m​)$ where $m$ is significantly smaller than $n.\;(n>m)$.
+This means that if we have $n$ features $(x_1​,…,xn_​)$ where $n$ is large, PCA can reduce it to $m$ features $(x_1​,…,x_m​)$ where $m$ is significantly smaller than $n.\;(n>m)$.
 
 > [!TLDR] Dimensionality Reduction:
 > Dimensionality reduction is like compressing a large, detailed map into a smaller, simpler one that still shows the most important landmarks. It's about finding the essential information in complex data and discarding the rest without losing too much meaning.
@@ -327,6 +325,6 @@ For example, in an email dataset, PCA can reduce numerous features (like individ
 > PCA can simplify the representation of data while preserving critical information, which can be useful for tasks like identifying 'Good Email' versus 'Spam Email' by projecting them onto a lower-dimensional space.
 
 > [!danger] PCA is unsupervised  
-PCA is an **unsupervised method**, which means it doesn’t know any correct labels or categories. It just tries to keep the most important patterns in the data — but those patterns might not match the intended categories.
+PCA is an **unsupervised method**, which means it doesn’t know any correct labels or categories. It just tries to keep the most important patterns in the data but those patterns might not match the intended categories.
 
 ---

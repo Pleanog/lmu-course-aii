@@ -72,7 +72,7 @@ This can be used when both the input and output are sequences. Like **translatin
 - Takes the **input sentence** word-by-word, e.g.  
     `Good → morning → everyone`
 - Each word is passed **one at a time** into the LSTM.
-- The LSTM "remembers" the meaning and structure as it goes — storing it in its hidden state.
+- The LSTM "remembers" the meaning and structure as it goes storing it in its hidden state.
 - At the end, the encoder compresses the **entire sentence's meaning** into a **fixed-size vector** (called a _context vector_).
 
 1. **Decoder**:
@@ -143,7 +143,7 @@ For such an agent there are 2 policies:
 
 ![[Pasted image 20250727150701.png]]
 
-"Q" refers to the function that the algorithm computes: the expected reward—that is, the _quality_—of an action taken in a given state. The goal is to approximate the Q-function
+"Q" refers to the function that the algorithm computes: the expected reward (that is, the *quality* of an action taken) in a given state. The goal is to approximate the Q-function
 
 ### Deep Q Networks (DQN)
 

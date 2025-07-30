@@ -128,7 +128,7 @@ model_functional.summary()
 ```
 
 > [!info]  How to keep track of complex patterns!
-> LSTMs (Long Short-Term Memory networks) include additional gates—**input, forget, and output gates**—along with a **cell state** that enables better control over what information to keep or discard. Each gate has its own set of weights, which significantly increases the total number of trainable parameters (**13,324 trainable parameters**,) compared to SimpleRNNs (**3,628**).
+> LSTMs (Long Short-Term Memory networks) include additional gates (**input, forget, and output gates**) along with a **cell state** that enables better control over what information to keep or discard. Each gate has its own set of weights, which significantly increases the total number of trainable parameters (**13,324 trainable parameters**,) compared to SimpleRNNs (**3,628**).
 > This richer architecture allows LSTMs to **retain relevant information over longer sequences**, making them more effective at learning **complex temporal patterns**, especially when dependencies span many time steps.
 
 

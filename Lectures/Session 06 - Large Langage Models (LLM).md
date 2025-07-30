@@ -15,15 +15,13 @@ Large Language Models (LLMs) are a class of machine learning models that can gen
 
 A historical overview reveals three main branches in the evolution of language models:
 ![[Pasted image 20250713223653.png]]
+> [Different development paths of LLMs](https://www.interconnects.ai/p/llm-development-paths)
 
 1. **Encoder-only models** like **BERT**: Best suited for understanding tasks such as classification, entity recognition, and sentiment analysis.
 2. **Decoder-only models** like **GPT**: Optimized for generative tasks such as writing, summarization, and code generation.
 3. **Encoder-decoder models** like **BART** and **T5**: Hybrid models designed for translation, summarization, and sequence-to-sequence tasks.
 
 Earlier steps in this evolution include models like **Word2Vec**, **GloVe**, **ELMo**, and **ULMFiT**, which laid the groundwork by focusing on word embeddings and contextual language representations.
-
-> [!CITE] LLM Development Paths – Interconnects.ai  
-> "[https://www.interconnects.ai/p/llm-development-paths](https://www.interconnects.ai/p/llm-development-paths)"
 
 > [!TIP] Think of the model types as tools:
 > 
@@ -50,7 +48,7 @@ The encoder's job is to **read and understand the input sequence**, and transfor
 #### Input → Embedding + Positional Encoding
 - **Input tokens** (e.g., words) are first turned into **word embeddings**, i.e., numerical vectors.
 - **Positional Encoding** is added to retain word order, which is not captured by the model otherwise.
-> [!TIP] Positional encoding adds a sense of time or order, like GPS coordinates for each word in a sentence.
+> [!TIP] Positional encoding adds a sense of time or order, kind of like coordinates for each word in a sentence.
 
 #### Nx Layers (e.g., 6 times repeated)
 Each layer has two sub-layers:
@@ -65,9 +63,9 @@ Each layer has two sub-layers:
 4. Again, **Add & Norm**
 
 ---
-### 🔄 Passing Data to Decoder
+### Passing Data to Decoder
 
-The encoder outputs a **contextual embedding** for each input token — a matrix of vectors. These go into the decoder’s **Encoder-Decoder Attention**, allowing the decoder to look back at the original input while generating output.
+The encoder outputs a **contextual embedding** for each input token (a matrix of vectors). These go into the decoder’s **Encoder-Decoder Attention**, allowing the decoder to look back at the original input while generating output.
 
 ---
 
@@ -189,7 +187,7 @@ These probabilities are passed through a **Softmax function** to normalize them.
 > [!TIP] Temperature is like a creativity dial
 > We can crank it up for poems, turn it down for factual answers.
 
-- Temperature Explained: [https://medium.com/@nigelgebodh/why-does-my-llm-have-a-temperature-f2e314a52086](https://medium.com/@nigelgebodh/why-does-my-llm-have-a-temperature-f2e314a52086)
+> Temperature Explained: [# Why Does My LLM Have A Temperature?](https://medium.com/@nigelgebodh/why-does-my-llm-have-a-temperature-f2e314a52086)
 
 > [!question] _How does temperature affect LLM output?_  
 > Higher temperature increases randomness and creativity; lower temperature prioritizes the most probable word.
@@ -197,6 +195,8 @@ These probabilities are passed through a **Softmax function** to normalize them.
 ---
 
 ## Attention Mechanism
+
+>Great youtube video to understand the attention mechanism [Attention in transformers, step-by-step - by Grant Sanderson aka 3blue1brown](https://www.youtube.com/watch?v=eMlx5fFNoYc)
 
 The **attention mechanism** is a fundamental part of transformer-based language models. It allows the model to dynamically determine **which other words in a sequence are relevant** to a given word when making predictions or building word representations.
 
@@ -207,7 +207,7 @@ Wee look at the sentence:
 
 > **“This model needs patience and a lot of glue.”**
 
-This sentence is ambiguous — particularly the word **“model.”** It could refer to:
+This sentence is ambiguous! Particularly the word **“model.”** It could refer to:
 - A **generic model** (like a mathematical or software model)
 - A **physical model**, like a plane or sculpture
 
@@ -217,17 +217,17 @@ So how does the LLM figure out the right interpretation?
 
 1. **Attention Assigns Relevance Weights**
 	- Each word in the sentence is turned into a vector. For each word, the model calculates **how much attention to pay to every other word**.
-	- The attention mechanism computes scores between “model” and all the other words in the sentence and gives them a score based on how **aligned their vectors are** in the embedding space — the more aligned, the **higher the attention weight**.
+	- The attention mechanism computes scores between “model” and all the other words in the sentence and gives them a score based on how **aligned their vectors are** in the embedding space. The more aligned, the **higher the attention weight**.
 		- These scores (after normalization via softmax) determine how much influence each word has on the **final representation** of “model”.
 2. **Context Helps Resolve Meaning**
 	- In the sentence, here's how attention likely behaves:
 
-| From Word     | Pays Attention To | Reason                                                              |
-| ------------- | ----------------- | ------------------------------------------------------------------- |
-| needs         | patience          | Verbs like “needs” often highlight the object/requirement           |
-| patience      | model             | “Patience” is required by the “model” — the dependency is backward  |
-| a lot of glue | glue              | Emphasizes the material; this cluster likely has internal attention |
-| glue          | model             | “Glue” refers back to the object that requires it — again, “model”  |
+| From Word     | Pays Attention To | Reason                                                                |
+| ------------- | ----------------- | --------------------------------------------------------------------- |
+| needs         | patience          | Verbs like “needs” often highlight the object/requirement             |
+| patience      | model             | “Patience” is required by the “model” here the dependency is backward |
+| a lot of glue | glue              | Emphasizes the material; this cluster likely has internal attention   |
+| glue          | model             | “Glue” refers back to the object that requires it; again, “model”     |
 
 > [!TIP] This is a **bidirectional flow**
 > While processing “glue”, the model recalls “model” to figure out what the glue is needed for.
@@ -261,7 +261,7 @@ So how does the LLM figure out the right interpretation?
 - **Masked multi-head self-attention** in transformers allows the model to attend only to previous tokens during training, preserving the autoregressive property needed for language generation. 
 - The **feed-forward network** then processes each token's contextualized representation independently, enabling non-linear transformations that enhance the model’s capacity to capture complex patterns.
 
-***Autoregressive** means the model generates each token based on the tokens that came before it — it predicts the next word step-by-step, never “looking ahead” to future words. This way, it can generate coherent sequences like sentences or paragraphs, one token at a time.*
+***Autoregressive** means the model generates each token based on the tokens that came before it. It predicts the next word step-by-step, never “looking ahead” to future words. This way, it can generate coherent sequences like sentences or paragraphs, one token at a time.*
 
 ***Non-linear transformations** are mathematical operations inside the model (like applying activation functions such as ReLU or GELU) that let it learn complex patterns beyond simple straight-line relationships. Without them, the model would only be able to represent simple linear functions, limiting its ability to understand and generate natural language.*
 
@@ -287,7 +287,7 @@ LLMs rely heavily on the **context window**, the number of tokens they can "see"
 
 ## Multimodal Interaction
 
-Modern LLMs like GPT-4o can interact across modalities — processing text, images, audio, and video.
+Modern LLMs like GPT-4o can interact across modalities processing text, images, audio, and video.
 
 `Video Input → Frame Analysis (CLIP) → Audio Extraction → Speech Recogintion → Prompt Fusion (Middleware) → LLM (GPT-4) → Response`
 

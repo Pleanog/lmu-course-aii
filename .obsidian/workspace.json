@@ -40,14 +40,12 @@
             "id": "3747efc35037e20e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Lectures/Session 08 - Q & A.md",
-                "mode": "source",
-                "source": false
+                "file": "Lecture Slides/2025-06-12-Session-4-NN.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Session 08 - Q & A"
+              "icon": "lucide-file-text",
+              "title": "2025-06-12-Session-4-NN"
             }
           }
         ],
@@ -64,24 +62,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lectures/Session 08 - Encoder, Prompting, Reinforcement learning and Applications.md",
+                "file": "Lectures/Session 01 - Artificial Intelligence in Interactive Systems.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Session 08 - Encoder, Prompting, Reinforcement learning and Applications"
+              "title": "Session 01 - Artificial Intelligence in Interactive Systems"
             }
           },
           {
             "id": "c8462dde00e41c33",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Images/Pasted image 20250725100815.png"
+                "file": "Lectures/Session 01 - Artificial Intelligence in Interactive Systems.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20250725100815"
+              "icon": "lucide-file",
+              "title": "Session 01 - Artificial Intelligence in Interactive Systems"
             }
           }
         ]
@@ -246,9 +246,20 @@
   "lastOpenFiles": [
     "Lectures/Session 08 - Q & A.md",
     "Lectures/Session 08 - Encoder, Prompting, Reinforcement learning and Applications.md",
-    "Images/Pasted image 20250725100815.png",
-    "Lecture Slides/2025-07-24-Session-8-Encoder-Prompting-Reinforcementlearning-ApplicationsF.pdf",
+    "Lectures/Session 07 - Online Machine Learning.md",
+    "Lectures/Session 06 - Large Langage Models (LLM).md",
     "Lectures/Session 01 - Artificial Intelligence in Interactive Systems.md",
+    "Lecture Slides/2025-05-08-Session-1.pdf",
+    "Images/Pasted image 20250725100815.png",
+    "Lectures/Session 05 - Long Short-Term Memory & GAN.md",
+    "Lectures/Session 04 - Neural Networks.md",
+    "Pasted image 20250730194732.png",
+    "Lecture Slides/2025-06-12-Session-4-NN.pdf",
+    "Lecture Slides/2025-05-21-Session-3-Intro-to-NN.pdf",
+    "Lectures/Session 03 - Intro to Neural Networks.md",
+    "Lectures/Session 02 - Intro to Machine Learning.md",
+    "Pasted image 20250730185116.png",
+    "Lecture Slides/2025-07-24-Session-8-Encoder-Prompting-Reinforcementlearning-ApplicationsF.pdf",
     "Images/Pasted image 20250727150522.png",
     "Images/Pasted image 20250727150701.png",
     "Images/Pasted image 20250727150614.png",
@@ -257,23 +268,12 @@
     "Images/Pasted image 20250727145017.png",
     "Images/Pasted image 20250727144800.png",
     "Images/Pasted image 20250727144559.png",
-    "Lectures/Session 05 - Long Short-Term Memory & GAN.md",
-    "Images/Pasted image 20250725150718.png",
-    "Lectures/Session 04 - Neural Networks.md",
-    "Images/Pasted image 20250725145954.png",
-    "Lectures/Session 02 - Intro to Machine Learning.md",
-    "Lectures/Session 06 - Large Langage Models (LLM).md",
-    "Lectures/Session 03 - Intro to Neural Networks.md",
-    "Lecture Slides/2025-05-08-Session-1.pdf",
-    "Lectures/Session 07 - Online Machine Learning.md",
     "Lecture Slides/2025-07-24-Seesion-8-OpenDiscussion.pdf",
     "Lecture Slides/2025-07-17-Session-7-PML_2025_OnlineMachineLearning.pdf",
     "Lecture Slides/Nicht bestätigt 766997.crdownload",
     "Lecture Slides/Nicht bestätigt 891199.crdownload",
     "Lecture Slides/2025-05-15-Session-2-Intro-to-ML.pdf",
     "Lecture Slides/2025-07-10-Session-6-LLM.pdf",
-    "Lecture Slides/2025-07-03-Session-5-LSTM-GAN-keynote-sides.pdf",
-    "Lecture Slides/2025-07-03-Session-5-LSTM-GAN.pdf",
     "README.md",
     "ToDO.md",
     "Exercises/Possible Exercice Questions.md"

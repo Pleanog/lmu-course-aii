@@ -33,8 +33,8 @@ OML is very suitable for environments where speed, memory constraints, and adapt
 Online vs. batch learning can be compared to:
 **Stochastic Gradient Descent (SGD)** vs. **Gradient Descent (GD)**:
 
-- **Gradient Descent (GD):** Uses the entire dataset to compute each update — slow but stable.
-- **Stochastic Gradient Descent (SGD):** Uses one sample or mini-batches for frequent updates — noisy but adaptive.
+- **Gradient Descent (GD):** Uses the entire dataset to compute each update. It is slow but stable.
+- **Stochastic Gradient Descent (SGD):** Uses one sample or mini-batches for frequent updates. It is noisy but adaptive.
 
 ![[Pasted image 20250717161427.png]]
 
@@ -174,7 +174,7 @@ The graphs show the collection of (sound) data over time. As more data is collec
     Prevent misclassification of new samples by training many **one-class classifiers**, each for one known category.
 
 > 🔍 **One-Class Classifiers:**  
-> These models only recognize their own class and reject anything that doesn't match — useful for novelty detection.
+> These models only recognize their own class and reject anything that doesn't match. It is useful for novelty detection.
 
 
 ---
@@ -204,9 +204,9 @@ Human pose data can be used to detect actions. The process typically includes:
 
 ### Metrics
 
-- **Accuracy, Precision, Recall, F1 Score** — standard performance indicators
-- **Learning Curves** — show performance over time/data volume
-- **Minimized Regret** — difference between actual model performance and a hypothetical optimal model
+- **Accuracy, Precision, Recall, F1 Score**: standard performance indicators
+- **Learning Curves**: shows performance over time/data volume
+- **Minimized Regret**: difference between actual model performance and a hypothetical optimal model
 
 > [!TLDR] Minimized Regret:  
 > Indicates how much performance is lost due to not having access to future data upfront.

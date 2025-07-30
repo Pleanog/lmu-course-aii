@@ -1,4 +1,3 @@
-
 ### **Questions that we should be able to answer**
 
 - We need to be able to draw architecture (about 3 differents one for a given problem in the exam)

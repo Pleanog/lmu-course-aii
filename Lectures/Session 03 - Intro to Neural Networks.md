@@ -27,27 +27,36 @@ Neural networks are built by stacking layers, each performing a specific transfo
 #### TensorFlow Syntax for a 2-Layer Model
 
 ``` python
+# Creating a Sequential model – a linear stack of layers
 model = tf.keras.Sequential()
-x = tf.keras.layers.InputLayer((400,), name="InputLayer")
-model.add(x)
-x = tf.keras.layers.Dense(14, name="HiddenLayer1", activation='relu')
-model.add(x)
+
+# Adding an input layer that expects vectors of size 400 (e.g., flattened input)
+model.add(tf.keras.layers.InputLayer((400,), name="InputLayer"))
+
+# Adding a dense (fully connected) hidden layer with 14 neurons and ReLU activation
+model.add(tf.keras.layers.Dense(14, name="HiddenLayer1", activation='relu'))
+
+# Adding another dense hidden layer with 8 neurons and ReLU activation
 model.add(tf.keras.layers.Dense(8, name="HiddenLayer2", activation='relu'))
+
+# Adding the final output layer with 2 neurons and softmax activation
+# This is used for binary classification (2 classes, with probabilities summing to 1 - done by softmax)
 model.add(tf.keras.layers.Dense(2, name="OutputLayer", activation='softmax'))
 ```
 
-This code defines a model with an input layer of 400 units, two hidden dense layers with 14 and 8 units respectively (using ReLU activation), and an output layer with 2 units (using softmax activation for classification).
-
-### Illustrative Network Architecture
-
-A neural network consists of interconnected layers, with each connection having an associated weight. The example network structure presented has an input layer, two hidden layers, and an output layer.
+The defined neural network in the code above consists of interconnected layers, with each connection having an associated weight.
+This network has an input layer, two hidden layers, and an output layer and looks like this:
 
 ![[Pasted image 20250717212507.png]]
 
-- **Input Layer**: Receives the raw data, here with 400 units.
+- **Input Layer**: Receives the raw data, here with 400 units
+	e.g., word counts in an email or email metadata
 - **Hidden Layer 1 (Dense)**: Contains 14 neurons.
+	Learns patterns from the input, like common spammy phrases
 - **Hidden Layer 2 (Dense)**: Contains 8 neurons.
+	Refines the patterns into higher-level clues.
 - **Output Layer (Dense)**: Produces the final output, here with 2 neurons.
+	Decision: spam or not spam (as probabilities, that add up to 1).
 
 Each neuron in the hidden and output layers processes its inputs, applies an activation function, and passes the result to the next layer.
 ### Single-Layer Perceptron
@@ -114,11 +123,11 @@ This definition means:
 
 ### Quick Summary
 
-- **Sigmoid**: Great for yes/no decisions. Use when you need a binary choice, like deciding to attend a concert based on cost.
+- **Sigmoid**: Great for yes/no decisions. A binary choice, like deciding to attend a concert based on cost.
 - **Tanh**: Useful for handling positive/negative distinctions, like scoring with both positive and negative values.
 - **ReLU**: Ideal for ignoring minor or negative values and focusing on stronger signals, like only responding to loud sounds.
 - **Leaky ReLU**: Adds a small response to negative values to prevent “dead” spots, like a dripping faucet.
-- **Softmax**: Use when you want a probability across multiple options, like choosing a favorite flavor with weighted preferences.
+- **Softmax**: Give a probability across multiple options, like choosing a favorite flavor with weighted preferences.
 [# Types of Activation Functions: Sigmoid tanh, ReLU, Softmax. Part 1](https://www.linkedin.com/pulse/types-activation-functions-sigmoid-tanh-relu-softmax-part-dave-uipuc/)
 
 
@@ -258,7 +267,7 @@ This is used to transform sequential or spatial data into a format suitable for 
 > s = stride aka “step size”
 > 🔍 The "step size" (or stride) refers to how many units the window moves forward each time.
 #### Benefits during Training
-- **Data Augmentation:** Using a step size of 1 means the sliding window moves by just one data point at a time. For example, if you have a sequence of 100 data points and a window size of 10, the number of training samples created is  
+- **Data Augmentation:** Using a step size of 1 means the sliding window moves by just one data point at a time. For example, if we have a sequence of 100 data points and a window size of 10, the number of training samples created is  
     **100 - 10 + 1 = 91**.  
     This happens because the first window covers points 1–10, the second covers 2–11, the third 3–12, and so on until the last window covers points 91–100. Each window overlaps a lot with its neighbors but is slightly shifted, giving the model many similar but unique training inputs.
 - **Increased Robustness:** By exposing the model to many overlapping, slightly shifted samples, it learns to recognize patterns **regardless of small shifts or misalignments** in the data. This helps the model generalize better and be less sensitive to noise or exact positioning.

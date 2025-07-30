@@ -1,15 +1,23 @@
 # Convolutional Neural Networks (CNNs)
 
-*We will lokk into the MNIST set later but a good interactive example of CNNs can be found here:[Basic Convnet for MNIST](https://transcranial.github.io/keras-js/#/mnist-cnn).* 
+*The MNIST Dataset will be used as an example later but a good interactive example of CNNs can be found here:[Basic Convnet for MNIST](https://transcranial.github.io/keras-js/#/mnist-cnn).* 
 
-Convolutional Neural Networks (CNNs) are a class of deep learning models primarily designed for analyzing visual imagery. They are inspired by the organization of the animal visual cortex and are particularly effective at identifying **patterns in images.**
 
 > [!CITE] Convolutional Neural Network - Wikipedia
 > "A convolutional neural network (CNN, or ConvNet) is a class of artificial neural network (ANN), most commonly applied to analyze visual imagery."
+> - They are inspired by the organization of the animal visual cortex and are particularly effective at identifying **patterns in images.**
 
 ### The Convolutional Process
 
 At the core of a CNN is the **convolution operation**. This involves a `filter` (also known as a kernel) that slides over the input image. For each position, the filter performs a dot product with the underlying image pixels, producing a single value in the output feature map. This process helps in extracting features such as edges, textures, and patterns.
+
+> [!hint] Convolution is Key!!  
+> The **convolution operation** (in german: Faltung) refers to an operation that **blends two functions** together; so the a _signal_ (like an image) and a _kernel_ (a filter) → into a third function (the output).
+
+> [!warning] Convolution is the foundation of CNNs.
+Without convolution, a CNN would lose its ability to focus on **local features**, which is critical for object detection, facial recognition, and medical image analysis.
+
+> Here is an awesome interactive [Online Tool to visualize how the Kernal works](https://setosa.io/ev/image-kernels/). There different kernels / filters can be applied to detect different features!
 
 The filter itself is a small matrix of weights that detects specific features.
 See in the image below the `filter`:
@@ -59,6 +67,8 @@ Pooling layers are used to reduce the spatial dimensions (height and width) of t
 > [!tip]  Eli5
 > **Pooling** is like zooming out on a very detailed photo. We're not trying to keep every little pixel but just the most important parts. And **max-pooling** looks at a section of the given image and asks: "what is the most important pixel (e.g. highest value) here?" and keeps just that one (*see image below*)
 
+> Max Pooling as a concept is rather simple, but here is [a nice tool to play with the different parameters of max pooling](https://deeplizard.com/resource/pavq7noze3), that also shows how pooling can add robustness to the learing process, when the filters like 'vertical stride' are set higher the input is shifted dramatically.
+
 ![[Pasted image 20250718205304.png]]
 > Max pooling with a 2x2 filter and stride = 2
 ### Max Pooling Layer
@@ -73,7 +83,7 @@ The Max Pooling layer is a common type of pooling.
 > [!question]  Why do we do pooling, if we just reduce the given information?
 >- It makes the data **smaller**, which means faster and cheaper computation.
 >- It helps the model **focus on the strongest signals**, like corners, edges, or patterns.
->- It adds some **translation robustness** — meaning, if a cat’s ear moves a tiny bit, the network still recognizes it.
+>- It adds some **translation robustness**. So if a handwritten “5” is slightly shifted left or right, the network still recognizes it as a “5.”
 
 ---
 
@@ -110,7 +120,7 @@ Good read: [Unveiling the Dropout Layer: An Essential Tool for Enhancing Neural 
 
 With dropout, certain nodes in a NN are set to the value zero in a training run, i.e. removed from the network. Thus, they have no influence on the prediction and also in the [backpropagation](https://databasecamp.de/en/ml/backpropagation-basics). Thus, a new, slightly modified network architecture is built in each run and the network learns to produce good predictions without certain inputs.
 
-When installing the dropout layer, a so-called dropout probability must also be specified. This determines how many of the nodes in the layer will be set equal to 0. In the example below we set the dropout probability or also called dropout-rate to $25\%$, so every $4^{th}$ node is set to $0$!
+When using a dropout layer, a so-called dropout probability must also be specified. This determines how many of the nodes in the layer will be set equal to 0. In the example below we set the dropout probability or also called dropout-rate to $25\%$, so every $4^{th}$ node is set to $0$!
 
 
 ![[Pasted image 20250718212456.png]]
@@ -228,7 +238,7 @@ For a deeper understanding read: [# Convolutional Neural Network (CNN): A Comple
 ## Optimizer
 
 > [!quote] What is an Optimizer?  
-> An **optimizer** is an algorithm that adjusts the weights and biases of a neural network during **backpropagation**, with the goal of minimizing the **loss function** — i.e., reducing the model’s prediction error.
+> An **optimizer** is an algorithm that adjusts the weights and biases of a neural network during **backpropagation**, with the goal of minimizing the **loss function**; i.e., reducing the model’s prediction error.
 
 It evaluates how well the model performed (based on the loss), then **slightly changes the weights** to make the next prediction better.
 It looks at the weights after each attempt of predicting a number. and changes the values slightly, to hopefully improve the prediction.
@@ -249,7 +259,7 @@ It looks at the weights after each attempt of predicting a number. and changes t
 > A line plot comparing different optimizers (Adam, Adagrad, SGD, RMSprop, etc.) based on their accuracy over training epochs.
 
 **Interpretation:**
-- Most optimizers (like Adam, RMSprop, Nadam) show a **steep increase in accuracy** early in training and then plateau — this is ideal.
+- Most optimizers (like Adam, RMSprop, Nadam) show a **steep increase in accuracy** early in training and then plateau **→ this is ideal.**
 - Others (like Adagrad, Adadelta) **improve slowly** or even **decline**, indicating they might not perform as well with the chosen architecture and dataset.
 - This shows that **choice of optimizer strongly affects learning speed and final accuracy**, even with identical model architectures.
 
@@ -360,7 +370,7 @@ When predicting continuous outputs, different loss functions are used:
 > 
 > - Use L1 when outliers exist and should not dominate training
 >     
-> - Use L2 when you want to penalize large deviations heavily
+> - Use L2 when we want to penalize large deviations heavily
 >     
 
 ---
@@ -383,7 +393,7 @@ This helps preserve **texture and perceptual similarity**, rather than pixel-per
 > [!question] _Why do pixel-wise losses lead to blurry outputs?_  
 > Pixel-wise losses (like MSE or MAE) measure the difference between each individual pixel of the prediction and the ground truth. When there are **multiple plausible correct outputs** (e.g. several valid ways to generate a face or a handwritten number), the model tends to **average** them to minimize the error.
 > 
-> This averaging smooths out differences and removes high-frequency details like edges or textures — resulting in a **blurry image**.
+> This averaging smooths out differences and removes high-frequency details like edges or textures resulting in a **blurry image**.
 > 
 > Feature Matching (FM) loss helps retain those details by comparing deeper **features** (e.g. extracted by a neural network layer) instead of just raw pixel values.
 
@@ -399,22 +409,22 @@ When training a model, the goal is to **learn patterns** from the training data 
 - It performs poorly on both **training** and **validation** data.
 - Examples:
 	- A red line that cuts straight through a wave-like distribution of blue dots, missing most of the curvature.
-	- In the validation graph: **Training and validation loss both stay high** — the model hasn’t learned enough.
+	- In the validation graph: **Training and validation loss both stay high**, this means: the model hasn’t learned enough.
 
 ---
 #### Overfitting
 > The model is **too complex**, learning not just patterns but also **noise** in the training data.
 - It performs very well on **training** data but poorly on **validation** data.
 - Examples:
-	- A red line that wiggles around every data point — matching training points exactly but failing to generalize.
-	- In the validation graph: **Training loss is low, but validation loss increases** — a clear sign of overfitting.
+	- A red line that wiggles around every data point. It is matching training points exactly but failing to generalize.
+	- In the validation graph: **Training loss is low, but validation loss increases**, a clear sign of overfitting.
     
 ---
 #### "Good Fit"
 > The model finds a **balanced level of complexity**, capturing the pattern but not memorizing the noise.
 - It generalizes well to new data.
 - Examples:
-	- A smooth red curve that flows **between** the wave-shaped dots — not too stiff, not too wiggly.
+	- A smooth red curve that flows **between** the wave-shaped dots.
 	- In the validation graph: **Training and validation losses are both low and close together**.
     
 ---
@@ -428,8 +438,8 @@ When training a model, the goal is to **learn patterns** from the training data 
 > [!question] _What happens when a model overfits to the training data?_  
 > When new data arrives (like fresh spam emails), the model might fail to classify them correctly. It has learned the **training data too specifically** and can’t generalize to **unseen cases**.
 
-> [!tip] _Be careful not to overfit to your test set!_  
-> Optimizing a model too much for a fixed test dataset, it no longer is testing generalization, it is just fitting another known set.  
+> [!tip] _Be careful not to overfit to test sets!_  
+> Optimizing a model too much for a fixed test dataset, it no longer is testing/learning for generalization, it is just fitting another known set.  
 > In this case, getting a **fresh dataset from the real world** to re-evaluate the model's performance. is a good call.
 
 ---
@@ -468,10 +478,10 @@ Let’s assume we apply a **random split across the entire dataset**:
 - 50% of the data (across users 1-4) → Validation
 - rest of the data (user 5) → Test
 
-But what happens when you then add User 5 (🟣) as test data?
+But what happens when we then add User 5 (🟣) as test data?
 
 > [!question] _Why is a random split across all users problematic in user-specific datasets?_  
-> Because the model might learn to fit data quirks from specific users (1–4), which don't generalize to new, unseen users. This leads to poor real-world performance — especially if User 5 behaves differently or falls outside the training distribution.
+> Because the model might learn to fit data quirks from specific users (1–4), which don't generalize to new, unseen users. This leads to poor real-world performance; especially if User 5 behaves differently or falls outside the training distribution.
 
 #### The Distribution Mismatch Problem
 
@@ -492,7 +502,7 @@ Now we split the data by user-id also called a **participant-wise split**, that 
 
 This avoids **data leakage** (e.g. having data from the same user in both training and validation).
 
-> 🔍 **Data leakage** occurs when **information from outside the training dataset** is inadvertently used to train the model — especially information that would **not be available at inference/test time**.
+> 🔍 **Data leakage** occurs when **information from outside the training dataset** is inadvertently used to train the model. Especially information that would **not be available at inference/test time**.
 
 > [!question] _What’s the downside of pure participant-wise splitting?_  
 > It can lead to **small training sets**, especially in low-data scenarios. Also, the model might underperform simply because it didn’t see enough variation.
@@ -505,13 +515,13 @@ Instead of splitting users entirely, we could also **split each user's data into
  - 20% → Validation
  - 10% → Test
 
-This increases the amount of data used for training and allows the model to learn from the full distribution — **within each user**.
+This increases the amount of data used for training and allows the model to learn from the full distribution ← **within each user**.
 
 > [!tip]  
 > This setup can be helpful for tasks like personalization, where the model needs to generalize across **instances**, not necessarily across **identities**.
 
 > [!question] _When is random split within users preferable?_  
-> When you're not concerned with unseen users, but instead want to improve prediction quality **within the same users** — for example in personalized systems.
+> When we're not concerned with unseen users, but instead want to improve prediction quality **within the same users**, for example in personalized systems.
 
 ---
 
@@ -642,11 +652,11 @@ Hyperparameter tuning is the process of optimizing **model configuration choices
 
 | Element                 | Tunable?  | Role in Hyperparameter Tuning                                                       |
 | ----------------------- | --------- | ----------------------------------------------------------------------------------- |
-| **Model structure**     | yes       | Number of layers, hidden units—crucial for capacity.                                |
+| **Model structure**     | yes       | Number of layers, hidden units                                                      |
 | **Loss function**       | sometimes | Usually fixed, but some variants (e.g. weighted loss) can be tuned.                 |
 | **Optimizer**           | yes       | Choosing between SGD, Adam, RMSProp, etc. affects convergence.                      |
-| **Learning rate**       | yes       | One of the most critical hyperparameters—controls step size in gradient descent.    |
-| **Dropout rate**        | yes       | Helps prevent overfitting—tuned to balance regularization.                          |
+| **Learning rate**       | yes       | One of the most critical hyperparameters it controls step size in gradient descent. |
+| **Dropout rate**        | yes       | Helps prevent overfitting and is tuned to balance regularization.                   |
 | **Batch normalization** | kind of   | It’s usually a design choice, not tuned frequently, but can affect tuning dynamics. |
 Unlike model parameters (like weights), **hyperparameters are chosen _externally_**, often via search and experimentation.
 
@@ -654,12 +664,38 @@ Unlike model parameters (like weights), **hyperparameters are chosen _externally
 
 ## Hyperparameter Search Strategies
 
+Hyperparameter search **requires input data** (e.g., images and labels) to work.  Because each combination of hyperparameters needs to be **tested by actually training and evaluating the model**.
 ###  Grid Search
 
 Exhaustive search over a **manually defined** set of hyperparameter values.
 
 ```python
-sklearn.model_selection.GridSearchCV(estimator=model, param_grid=params, cv=5)
+
+# The function that builds your CNN
+def create_model(optimizer='adam', filters=32):
+    model = Sequential()
+    model.add(Conv2D(filters=filters, 
+    ...
+    ...
+    )
+    
+# Wraping the model in KerasClassifier
+cnn_model = KerasClassifier(model=create_model, epochs=3, batch_size=32, verbose=0)
+
+# The list of hyperparameters we want to test and the values we want to try for each
+param_grid = {
+  'learning_rate': [0.001, 0.01, 0.1],
+  'batch_size': [16, 32, 64]
+}
+
+# -------
+# Ou **GridSearch** using the given parameters and model 
+# cv stands for cross-validation. The data will be split into 5 folds: 4 folds used for training, 1 for validation. This happens 5 times, each time with a different validation fold. It helps ensure the results are reliable and not just lucky guesses.
+sklearn.model_selection.GridSearchCV(estimator=cnn_model, param_grid=params, cv=5)
+# -------
+
+# Fit the grid search on the training data
+grid_search.fit(X_train, y_train)
 ```
 
 - Good for **small models** with limited parameter space.
@@ -667,7 +703,7 @@ sklearn.model_selection.GridSearchCV(estimator=model, param_grid=params, cv=5)
 - Can use **partial grid search** to improve runtime.
 
 > [!tip]  
-> Grid search works best when you have **prior knowledge** about useful value ranges.
+> Grid search works best when having **prior knowledge** about useful value ranges.
 
 ---
 
@@ -697,9 +733,9 @@ Manual tuning based on experience and observation.
 
 ### Network Growing & Pruning
 
-| Growing                                                                                                                                                   | Pruning                                                                                                                                                    |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Start with a small model and **add neurons or layers**.<br>- Less time- and resource-intensive at first.<br>- Good for **gradually increasing** capacity. | Start big, then **remove unnecessary neurons**.<br>- Time-intensive but can yield **compact models**.<br>- Suited for **overparameterized** architectures. |
+| Growing                                                                                                                                                  | Pruning                                                                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Start with a small model and **add neurons or layers**.<br>- Less time and resource-intensive at first.<br>- Good for **gradually increasing** capacity. | Start big, then **remove unnecessary neurons**.<br>- Time-intensive but can yield **compact models**.<br>- Suited for **overparameterized** architectures. |
 
 > [!tip]  
 > Growing is often better for early-stage tuning. Pruning is useful after a **final model** is trained.
@@ -779,9 +815,9 @@ model.add(Dense(5, activation='softmax'))
 
 ---
 
-## Understanding a Model (VGG16)
+## Understanding a complete Model (VGG16)
+
+To better understand how VGG16 works this is a good read: 
+[VGGNet-16 Architecture: A Complete Guide](https://www.kaggle.com/code/blurredmachine/vggnet-16-architecture-a-complete-guide)
 
 ![[Pasted image 20250725150718.png]]
-
-
-Until 17. august
